@@ -1,0 +1,97 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <body>
+
+        <ui:composition template="./Layout.xhtml">
+
+            <ui:define name="content">
+                <h:form>
+                    <h:dataTable class="table" value="#{expandedDeliveryViewBean.delivery}" var="delivery">
+
+                        <h:column>
+                            <f:facet name="header">ID</f:facet>
+                            <h:outputText value="#{delivery.deliveryId}"/>
+                        </h:column>
+
+                        <h:column rendered="#{delivery.deliveryStatus.name ne 'Awaiting Collection' 
+                                              and delivery.deliveryStatus.name ne 'Delivered'}">
+                            <f:facet name="header">Expected Delivery Date</f:facet>
+                            <h:outputText value="#{delivery.deliveryDate}"/>
+                        </h:column>
+
+                        <h:column rendered="#{delivery.deliveryStatus.name eq 'Awaiting Collection'}">
+                            <f:facet name="header">Collection Date</f:facet>
+                            <h:outputText value="#{delivery.deliveryDate}"/>
+                        </h:column>
+                        
+                        <h:column rendered="#{delivery.deliveryStatus.name eq 'Delivered'}">
+                            <f:facet name="header">Date Delivered</f:facet>
+                            <h:outputText value="#{delivery.deliveryDate}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">Depot</f:facet>
+                            <h:outputText value="#{delivery.depot.name}"/>
+                        </h:column>
+
+                        <h:column>
+                            <f:facet name="header">Status</f:facet>
+                            <h:outputText value="#{delivery.deliveryStatus.name}"/>
+                        </h:column>
+
+                        <h:column>
+                            <f:facet name="header">Recipient</f:facet>
+                            <h:outputText value="#{delivery.parcel.recipientName}"/>
+                        </h:column> 
+
+                        <h:column>
+                            <f:facet name="header">Address</f:facet>
+                            <h:outputText value="#{delivery.parcel.addressLine1}"/>
+                        </h:column>
+
+                        <h:column>
+                            <f:facet name="header">City</f:facet>
+                            <h:outputText value="#{delivery.parcel.city}"/>
+                        </h:column>
+
+                        <h:column>
+                            <f:facet name="header">Postcode</f:facet>
+                            <h:outputText value="#{delivery.parcel.postcode}"/>
+                        </h:column>
+                    </h:dataTable>
+                    <h:commandButton class="btn btn-primary" value="Cancel Delivery" action="#{expandedDeliveryViewBean.cancelDelivery()}"
+                                     rendered="#{(expandedDeliveryViewBean.delivery.deliveryStatus.name ne 'Scheduled For Cancellation'
+                                                 and expandedDeliveryViewBean.delivery.deliveryStatus.name ne 'Cancelled') 
+                                                 and sessionScope.loggedDriver eq null}">
+                    </h:commandButton>
+                    
+                    <h:commandButton class="btn btn-primary" value="Book Collection" action="#{bookCollectionBean.setDeliveryForCollection(expandedDeliveryViewBean.delivery)}" 
+                                     rendered="#{(expandedDeliveryViewBean.delivery.deliveryStatus.name eq 'Delivery Failed' 
+                                                 or expandedDeliveryViewBean.delivery.deliveryStatus.name eq 'At Depot'
+                                                 or expandedDeliveryViewBean.delivery.deliveryStatus.name eq 'Awaiting Collection'
+                                                 or expandedDeliveryViewBean.delivery.deliveryStatus.name eq 'Re-Scheduled For Delivery') 
+                                                 and sessionScope.loggedDriver eq null}">
+                    </h:commandButton>
+                    
+                    <h:commandButton class="btn btn-primary" value="Re-Schedule Delivery" action="#{rescheduleDeliveryBean.setDeliveryForRescheduling(expandedDeliveryViewBean.delivery)}"
+                                     rendered="#{(expandedDeliveryViewBean.delivery.deliveryStatus.name ne 'Out For Delivery'
+                                                 and expandedDeliveryViewBean.delivery.deliveryStatus.name ne 'Delivered'
+                                                 and expandedDeliveryViewBean.delivery.deliveryStatus.name ne 'Cancelled'
+                                                 and expandedDeliveryViewBean.delivery.deliveryStatus.name ne 'Scheduled For Cancellation')
+                                                 and sessionScope.loggedDriver eq null}">
+                    </h:commandButton>
+                    
+                    <h:commandButton class="btn btn-primary" value="Change Status" action="#{updateDeliveryStatusBean.changeDeliveryStatus(expandedDeliveryViewBean.delivery.deliveryId)}"
+                                     rendered="#{sessionScope.loggedDriver ne null}">
+                    </h:commandButton>
+                </h:form>
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>

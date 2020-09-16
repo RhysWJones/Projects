@@ -1,0 +1,77 @@
+1.	Add the following test to your DVDTest class:
+
+    @Test
+    public void testEquals() 
+    {
+        Person p2 = new Person("Leonardo", "DiCaprio");
+        DVD d2 = new DVD("Inception", p2, 5);
+        DVD d3 = new DVD("Gone with the Wind", p2, 4);
+        assertEquals(d2, d1);
+        assertNotSame(d2, d1);
+        assertEquals(d1, d1);
+        assertSame(d1, d1);
+        assertFalse(d3.equals(d1));
+    }
+	
+	As you have not yet overridden the default Object equals() method, this test should fail.   Can you explain why?
+	
+	The equals method for class Object implements the most discriminating possible equivalence relation on objects;
+	that is, for any non-null reference values x and y, this method returns true if and only if x and y refer to the
+	same object (x == y has the value true).
+
+	Note that it is generally necessary to override the hashCode method whenever this method is overridden, 
+	so as to maintain the general contract for the hashCode method, which states that equal objects must have 
+	equal hash codes.
+
+
+Now test the default hashCode() methods of DVD and Person using the test below.  
+The Object hashCode() method returns the memory location of the object.
+
+    @Test
+    public void testHashCode() {
+        Person p2 = new Person("Leonardo", "DiCaprio");
+        DVD d2 = new DVD("Inception", p2, 5);
+        assertEquals(d2.hashCode(), d1.hashCode());
+        assertEquals(p2.hashCode(), d1.getLeadActor().hashCode());
+    }
+
+Again this test should fail – why?
+Because each instance of an object is created independently, and therefore has it's own unique location in memory. I.E. if p1 and p2 have the same information 
+(first and last name are the same)
+that doesn't mean they have the same memory address, otherwise if you destroyed one of those objects, the second could no longer exist either.
+
+What relationship should the hashCode() method have to the equals() method?
+The equals method should also check to see whether the hashcodes of the objects are the same, as this is the very definition of equals, 
+if they have the same hashcode, they are literally the same object.
+
+Why does this test method not include a test of whether two non-equal DVD objects have different hashcodes?
+Because that isn't something that needs to be tested, due to the nature of hashcodes, every instance of an object will definitively not have identical hashcodes.
+
+
+Add the lines in bold to the testClone() method of DVDTest:
+
+    @Test
+    public void testClone() throws CloneNotSupportedException {
+        DVD d2 = (DVD)d1.clone();
+        assertEquals(d2, d1);
+        assertNotSame(d2, d1);
+        // change the lead actor of the original DVD object
+        Person p1 = d1.getLeadActor();
+        p1.setFirstName("Clark");
+        p1.setLastName("Gable");
+        assertFalse(d2.equals(d1));
+        assertEquals("Clark Gable", d1.getLeadActor().toString());
+        assertEquals("Leonardo DiCaprio", d2.getLeadActor().toString());
+}
+
+The test should now fail – the objects d1 and d2 are still equal, even though the name of the leadActor object associated with d1 has been changed.
+ Why is this so? 
+
+This is because the two objects are using P1 as their Person object, the default for clone is a shallow clone, this means it copies the values of the fields in
+the original object, however with shallow clones, anywhere the original object has any references to other objects as fields, then only references to those objects
+are made, meaning where p1 is edited, it changes for both the clone and the original.
+
+
+What is the difference between a shallow and a deep clone?
+A shallow clone makes a copy of the object, however only a reference is created to any objects that are attributes of the cloned object.
+Whereas a deep clone will make a copy of any object attributes within the cloned object.

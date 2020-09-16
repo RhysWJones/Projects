@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start">
+
+    <include
+        layout="@layout/app_bar_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!--  CONTENT    -->
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <ScrollView android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/appbar_margin_comp">
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- FORENAME -->
+        <android.support.design.widget.TextInputLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/update_forename"
+                android:hint="@string/forename"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:inputType="text"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <!-- SURNAME -->
+        <android.support.design.widget.TextInputLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/update_surname"
+                android:hint="@string/surname"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:inputType="text"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <!-- DOB -->
+        <android.support.design.widget.TextInputLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/update_DOB"
+                android:hint="Date of Birth:"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:inputType="none"
+                android:focusable="false"
+                android:textColor="#afafaf"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <!-- ADDRESS LINE 1 -->
+        <android.support.design.widget.TextInputLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/update_address_line_1"
+                android:hint="@string/address_line_1"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:inputType="text"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <!-- ADDRESS LINE 2 -->
+        <android.support.design.widget.TextInputLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/update_address_line_2"
+                android:hint="@string/address_line_2"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:inputType="text"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <!-- POSTCODE -->
+        <android.support.design.widget.TextInputLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/update_postcode"
+                android:hint="@string/postcode"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:inputType="text"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <!-- USERNAME -->
+        <android.support.design.widget.TextInputLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/update_username"
+                android:text="USERNAME"
+                android:hint="Username:"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:inputType="none"
+                android:focusable="false"
+                android:textColor="#afafaf"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <!-- NEW PASSWORD -->
+        <android.support.design.widget.TextInputLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/update_password"
+                android:hint="@string/new_password"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:inputType="textPassword"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <!-- UPDATE BUTTON -->
+        <android.widget.Button
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/update_submit_button"
+            android:text="Update"
+            android:layout_gravity="right"
+            android:layout_marginRight="10dp"
+            android:onClick="update"/>
+
+    </LinearLayout>
+    </ScrollView>
+    </LinearLayout>
+    <!--  END CONTENT    -->
+
+    <android.support.design.widget.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:headerLayout="@layout/nav_header_main"
+        app:menu="@menu/activity_main_drawer" />
+
+
+</android.support.v4.widget.DrawerLayout>

@@ -1,0 +1,59 @@
+QUESTION1
+=========
+
+What is the advantage of implementing RaceCar as an inner class of RaceCarPanel?
+
+ANSWER
+======
+
+If RaceCar is an inner class of RaceCarPanel, then they can both access everything inside each other, meaning RaceCar can 
+populate the RaceCarPanel RaceCar Array
+And RaceCarPanel can call the Display method found inside RaceCar. It also allows the RaceCarPanel to instantiate the Race 
+cars when it is instantiated.
+
+QUESTION2
+=========
+
+Why does RaceCarApplet implement the Runnable interface?  
+In which class and method is the RaceCarApplet thread started?
+
+ANSWER
+======
+
+RaceCarApplet implements the runnable interface because it creates a new thread on which to repaint the RaceCarPanel every 25 
+milliseconds.
+The RaceCarApplet thread is started in the Start() Method inside RaceCarApplet.java
+
+QUESTION3
+=========
+
+In the RaceCarPanel method with the signature
+
+private synchronized void goThroughNarrows(RaceCar rc)
+
+what is the significance of the keyword synchronized?  
+Try commenting out this keyword – what happens?
+
+ANSWER
+======
+
+Synchronised stops any thread from entering that block of code (That method) until the current thread inside it has left that 
+method and moved onto another.
+Therefore RaceCars must wait until whichever RaceCar is currently going through the narrows has left, before they can enter. 
+Without being synchronised they would all
+essentially crash (Go through the narrows / the method at the same time)
+
+QUESTION4
+=========
+
+Which RaceCarApplet method is called if the viewer moves to a new web page?  
+Trace the method(s) called by this method – why is this code important?
+
+ANSWER
+======
+
+The Stop method is called in RaceCarApplet whenever the viewer moves to a new web page. This in turn calls the stop method inside 
+the RaceCarPanel and sets all of the threads inside there to null, before setting the repaint thread to null. 
+Then the applet calls destroy.
+This code is important because the threads are using resources otherwise, and there is no need to use those resources if you can't
+see what they are doing (An animation doesn't need resources if you can't see it)

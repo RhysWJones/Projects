@@ -1,0 +1,206 @@
+package innerclassesproj;
+
+public class Student
+{
+    private String name;
+    private Address homeAddress, uniAddress;
+    
+    public Student(String name, int houseNum, String homeStreet)
+    {
+        this.name = name;
+        homeAddress = new Address(houseNum, homeStreet);
+    }
+    
+    public void setUniAddress(Address uniAddress)
+    {
+        this.uniAddress = uniAddress;
+    }
+    
+    @Override
+    public String toString()
+    {
+        if (homeAddress != null && uniAddress != null)
+        {
+        return "Home Address:\n" + homeAddress + "\n\nUni Address:\n" + uniAddress;
+        }
+        
+        else if (homeAddress != null && uniAddress == null)
+        {
+            return "" + homeAddress;
+        }
+        
+        else if (homeAddress == null && uniAddress != null)
+        {
+            return "" + uniAddress;
+        }
+        
+        else
+        {
+            return "Student has no Address";
+        }
+    }
+    
+    public class Address
+    {
+        private int number;
+        private String street;
+        
+        public Address(int number, String street)
+        {
+            this.number = number;
+            this.street = street;
+        }
+        
+        @Override
+        public String toString()
+        {
+            return name + "\n" + number + " " + street;
+        }
+    }
+}
+
+
+
+
+
+
+
+package innerclassesproj;
+
+public class Student
+{
+    private String name;
+    private Address homeAddress, uniAddress;
+    
+    public Student(String name, int houseNum, String homeStreet)
+    {
+        this.name = name;
+        homeAddress = new Address(houseNum, homeStreet);
+    }
+    
+    public void setUniAddress(Address uniAddress)
+    {
+        this.uniAddress = uniAddress;
+    }
+    
+    public void setUniAddress(int hNum, String StrName)<--- created this so that i could still populate uniAddress, since after making Address private i can no 
+	longer create instances of Address from my test class
+    {
+        uniAddress = new Address(hNum, StrName);
+    }
+    
+    @Override
+    public String toString()
+    {
+        if (homeAddress != null && uniAddress != null)
+        {
+        return "Home Address:\n" + homeAddress + "\n\nUni Address:\n" + uniAddress;
+        }
+        
+        else if (homeAddress != null && uniAddress == null)
+        {
+            return "" + homeAddress;
+        }
+        
+        else if (homeAddress == null && uniAddress != null)
+        {
+            return "" + uniAddress;
+        }
+        
+        else
+        {
+            return "Student has no Address";
+        }
+    }
+    
+    private class Address
+    {
+        private int number;
+        private String street;
+        
+        public Address(int number, String street)
+        {
+            this.number = number;
+            this.street = street;
+        }
+        
+        public String toString()
+        {
+            return name + "\n" + number + " " + street;
+        }
+    }
+}
+
+
+
+
+// I have set the Student variables "name" and "homeAddress, uniAddress" to be private static, so as to allow them to be accessed by the Address class
+I originally tried something along the lines of "return (new Student().name)..." after some research online, however since this is calling the Student class constructor
+it needed populating. I also tried to have a Student object passed into the Address toString method and calling Student.name, but this output memory locations of the variables
+instead.
+
+package innerclassesproj;
+
+public class Student
+{
+    private static String name;
+    private static Address homeAddress, uniAddress;
+    
+    public Student(String name, int houseNum, String homeStreet)
+    {
+        this.name = name;
+        homeAddress = new Address(houseNum, homeStreet);
+    }
+    
+    public void setUniAddress(Address uniAddress)
+    {
+        this.uniAddress = uniAddress;
+    }
+    
+    public void setUniAddress(int hNum, String StrName)
+    {
+        uniAddress = new Address(hNum, StrName);
+    }
+    
+    @Override
+    public String toString()
+    {
+        if (homeAddress != null && uniAddress != null)
+        {
+        return "Home Address:\n" + homeAddress + "\n\nUni Address:\n" + uniAddress;
+        }
+        
+        else if (homeAddress != null && uniAddress == null)
+        {
+            return "" + homeAddress;
+        }
+        
+        else if (homeAddress == null && uniAddress != null)
+        {
+            return "" + uniAddress;
+        }
+        
+        else
+        {
+            return "Student has no Address";
+        }
+    }
+    
+    public static class Address
+    {
+        private int number;
+        private String street;
+        
+        public Address(int number, String street)
+        {
+            this.number = number;
+            this.street = street;
+        }
+        
+        @Override
+        public String toString()
+        {
+            return name + "\n" + number + " " + street;
+        }
+    }
+}

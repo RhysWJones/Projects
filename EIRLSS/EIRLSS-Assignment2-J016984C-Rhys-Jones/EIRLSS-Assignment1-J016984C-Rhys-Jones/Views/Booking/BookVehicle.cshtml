@@ -1,0 +1,135 @@
+﻿@model EIRLSS_Assignment1_J016984C_Rhys_Jones.ViewModels.BookVehicleViewModel
+@{
+    ViewData["Title"] = "BookVehicle";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Book @ViewBag.ChosenVehicle.Manufacturer @ViewBag.ChosenVehicle.Model</h1>
+<div asp-validation-summary="All" class="text-danger"></div>
+
+<p class="alert-danger">You will be required to present your driving licence, and one other form of identity from either a utility bill dated no later than 3 months old, or council tax statement.</p>
+<p class="alert-info">Bookings must be a minimum of half a day, and cannot exceed two weeks.</p>
+
+<div class="row">
+    <div class="col-sm-4">
+        <div class="card">
+            <img class="card-img-top" src="~/Images/Vehicles/@ViewBag.ChosenVehicle.VehicleImageSource" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">@(((decimal)ViewBag.ChosenVehicle.CostPerDay).ToString("C2"))/day</h5>
+                <p class="card-text">@ViewBag.ChosenVehicle.Manufacturer @ViewBag.ChosenVehicle.Model</p>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">@ViewBag.ChosenVehicle.Colour</li>
+                <li class="list-group-item">@ViewBag.ChosenVehicle.Transmission.Type</li>
+                <li class="list-group-item">@ViewBag.ChosenVehicle.Fuel.Type</li>
+            </ul>
+        </div>
+    </div>
+
+    <form asp-controller="booking" asp-action="BookVehicle" method="post">
+        <div class="form-row mb-1">
+            <div class="form-group">
+                <label asp-for="StartDate">Start Date</label>
+                <input asp-for="StartDate" class="form-control" type="date" id="StartDate" value=@(new  DateTime().Date)>
+                <span asp-validation-for="StartDate" class="text-danger"></span>
+            </div>
+
+            <div class="form-check form-check-inline">
+                <label class="form-check-label mr-2 ml-2" asp-for="StartHalfDay">Collect Mid Day?</label>
+                <input asp-for="StartHalfDay" class="form-check-input" type="checkbox" id="StartHalfDay">
+                <span asp-validation-for="StartHalfDay" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="form-row mb-1">
+            <div class="form-group">
+                <label asp-for="EndDate">End Date</label>
+                <input asp-for="EndDate" class="form-control" type="date" id="EndDate" value=@(new DateTime().Date.AddDays(14))>
+                <span asp-validation-for="EndDate" class="text-danger"></span>
+            </div>
+
+            <div class="form-check form-check-inline">
+                <label class="form-check-label mr-2 ml-2" asp-for="EndHalfDay">Return Mid Day?</label>
+                <input asp-for="EndHalfDay" class="form-check-input" type="checkbox" id="EndHalfDay">
+                <span asp-validation-for="EndHalfDay" class="text-danger"></span>
+            </div>
+        </div>
+
+        <p>Equipment</p><hr/>
+
+        @{
+            for (int i = 0; i < Model.ChosenEquipmentList.Count(); i++)
+            {
+                <div class="form-check form-check-inline mb-1">
+                    <label  class="form-check-label mr-2" asp-for="@Model.ChosenEquipmentList[i].Id">@Model.ChosenEquipmentList[i].Name </label>
+                    <input asp-for="@Model.ChosenEquipmentList[i].CheckboxAnswer" type="checkbox" />
+                    <input asp-for="@Model.ChosenEquipmentList[i].Id" hidden />
+                    <input asp-for="@Model.ChosenEquipmentList[i].Name" hidden />
+                </div>
+            }
+        }
+
+        <div class="form-row mb-2">
+            <label class="form-check-label" asp-for="TotalCost">Cost Of Rental</label>
+            <input asp-for="TotalCost" class="form-control" type="number" placeholder="Total" id="TotalCost" readonly>
+            <span asp-validation-for="TotalCost" class="text-danger"></span>
+
+            <input asp-for="UserId" type="text" value="@Model.UserId" hidden>
+            <input asp-for="ChosenVehicleId" type="number" value="@ViewBag.ChosenVehicle.Id" hidden>
+            <input class="form-control" type="number" value="@ViewBag.ChosenVehicle.CostPerDay" id="CostPerDay" hidden>
+        </div>
+            <button type="submit" class="btn btn-primary">Book Vehicle</button>
+    </form>
+</div>
+
+@section scripts 
+{
+    <script type="text/javascript">
+        $(document).ready(function (e) {
+
+            var StartDate = document.getElementById('StartDate');
+            var EndDate = document.getElementById('EndDate');
+            var StartHalfDay = document.getElementById('StartHalfDay');
+            var EndHalfDay = document.getElementById('EndHalfDay');
+            var TotalCost = document.getElementById('TotalCost');
+            var CostPerDay = document.getElementById('CostPerDay');
+
+            function updateSum()
+            {
+                var start = new Date(StartDate.value);
+                var end = new Date(EndDate.value);
+
+                var difference = end.getTime() - start.getTime();
+                var daysOfRental = difference / (1000 * 3600 * 24)
+
+                var total = CostPerDay.value * daysOfRental;
+
+                if (StartHalfDay.checked == true && total > 0) {
+                    total = (total - (CostPerDay.value / 2))
+                }
+
+                if (EndHalfDay.checked == true) {
+                    total = (total + (CostPerDay.value / 2))
+                }
+
+                TotalCost.value = total;
+            }
+
+            document.getElementById("EndDate").onchange = function (e) {
+                updateSum();
+            }
+
+            document.getElementById("StartDate").onchange = function (e) {
+                updateSum();
+            }
+
+            document.getElementById("StartHalfDay").onchange = function (e) {
+                updateSum();
+            }
+
+            document.getElementById("EndHalfDay").onchange = function (e) {
+                updateSum();
+            }
+        });
+    </script>
+}

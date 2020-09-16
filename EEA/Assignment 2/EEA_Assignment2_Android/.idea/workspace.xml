@@ -1,0 +1,666 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AndroidLayouts">
+    <shared>
+      <config />
+    </shared>
+  </component>
+  <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="info" />
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="9bd8418c-47fb-4751-ab00-0f90a0a0ad89" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/build.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/build/classes/.netbeans_automatic_build" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/build/classes/.netbeans_update_resources" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/build/classes/EEA_Assignment1_Library.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/build/classes/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/build/classes/META-INF/persistence.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/build/classes/application_ui/AssignRouteToDriverCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/build/classes/application_ui/AssignRouteToDriverCommandLocal.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/build/classes/application_ui/BookCollectionCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/build/classes/application_ui/BookCollectionCommandLocal.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/build/classes/application_ui/CancelDeliveryCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/build/classes/application_ui/CancelDeliveryCommandLocal.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/build/classes/application_ui/ChangeDeliveryStatusCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/build/classes/application_ui/ChangeDeliveryStatusCommandLocal.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/build/classes/application_ui/Command.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/build/classes/application_ui/CommandFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/build/classes/application_ui/CommandFactoryLocal.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/build/classes/application_ui/DeleteAccountCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/build/classes/application_ui/DeleteAccountCommandLocal.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/build/classes/application_ui/DeliverDeliveryCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/build/classes/application_ui/DeliverDeliveryCommandLocal.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/build/classes/application_ui/DeliverySearchCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/build/classes/application_ui/DeliverySearchCommandLocal.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/build/classes/application_ui/FailDeliveryCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/build/classes/application_ui/FailDeliveryCommandLocal.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/build/classes/application_ui/GetDeliveriesForRouteCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/build/classes/application_ui/GetDeliveriesForRouteCommandLocal.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/build/classes/application_ui/GetDeliveryStatusesCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/build/classes/application_ui/GetDeliveryStatusesCommandLocal.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/build/classes/application_ui/GetDriverDeliveriesCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/build/classes/application_ui/GetDriverDeliveriesCommandLocal.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/build/classes/application_ui/GetRecipientDeliveriesCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/build/classes/application_ui/GetRecipientDeliveriesCommandLocal.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/build/classes/application_ui/GetRoutesCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/build/classes/application_ui/GetRoutesCommandLocal.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/build/classes/application_ui/LoginCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/build/classes/application_ui/LoginCommandLocal.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/build/classes/application_ui/NullObjectCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/build/classes/application_ui/NullObjectCommandLocal.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/build/classes/application_ui/RegisterCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/build/classes/application_ui/RegisterCommandLocal.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/build/classes/application_ui/RescheduleDeliveryCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/build/classes/application_ui/RescheduleDeliveryCommandLocal.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/build/classes/application_ui/SetRouteDeliveriesToOutForDeliveryCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/build/classes/application_ui/SetRouteDeliveriesToOutForDeliveryCommandLocal.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/build/classes/application_ui/UpdateAccountDetailsCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/build/classes/application_ui/UpdateAccountDetailsCommandLocal.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/build/classes/database/DTOConversionGateway.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/build/classes/database/DTOConversionGatewayLocal.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/build/classes/database/DeliveryGateway.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/build/classes/database/DeliveryGatewayLocal.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/build/classes/database/DeliveryStatusGateway.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/build/classes/database/DeliveryStatusGatewayLocal.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/build/classes/database/RouteGateway.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/build/classes/database/RouteGatewayLocal.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/build/classes/database/UserGateway.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/build/classes/database/UserGatewayLocal.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/build/classes/ejb/DeliveryHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/build/classes/ejb/DeliveryHandlerLocal.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/build/classes/ejb/DeliveryStatusHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/build/classes/ejb/DeliveryStatusHandlerLocal.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/build/classes/ejb/DriverUI.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/build/classes/ejb/RouteHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/build/classes/ejb/RouteHandlerLocal.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/build/classes/ejb/UserHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/build/classes/ejb/UserHandlerLocal.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/build/classes/ejb/User_UI.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/build/classes/entity/Delivery.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/build/classes/entity/Delivery.rapt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/build/classes/entity/DeliveryStatus.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/build/classes/entity/DeliveryStatus.rapt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/build/classes/entity/DeliveryStatus_.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/build/classes/entity/Delivery_.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/build/classes/entity/Depot.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/build/classes/entity/Depot.rapt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/build/classes/entity/Depot_.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/build/classes/entity/Parcel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/build/classes/entity/Parcel.rapt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/build/classes/entity/Parcel_.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/build/classes/entity/Route.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/build/classes/entity/Route.rapt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/build/classes/entity/Route_.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/build/classes/entity/Users.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/build/classes/entity/Users.rapt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/build/classes/entity/Users_.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/build/classes/resouces.res" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/build/generated-sources/ap-source-output/entity/DeliveryStatus_.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/build/generated-sources/ap-source-output/entity/Delivery_.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/build/generated-sources/ap-source-output/entity/Depot_.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/build/generated-sources/ap-source-output/entity/Parcel_.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/build/generated-sources/ap-source-output/entity/Route_.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/build/generated-sources/ap-source-output/entity/Users_.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/dist/EEA_Assignment1_J016984C-ejb.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/nbproject/ant-deploy.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/nbproject/build-impl.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/nbproject/genfiles.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/nbproject/private/private.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/nbproject/private/private.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/nbproject/project.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/nbproject/project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/setup/sun-resources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/src/conf/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/src/conf/persistence.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/src/java/application_ui/AssignRouteToDriverCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/src/java/application_ui/AssignRouteToDriverCommandLocal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/src/java/application_ui/BookCollectionCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/src/java/application_ui/BookCollectionCommandLocal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/src/java/application_ui/CancelDeliveryCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/src/java/application_ui/CancelDeliveryCommandLocal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/src/java/application_ui/ChangeDeliveryStatusCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/src/java/application_ui/ChangeDeliveryStatusCommandLocal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/src/java/application_ui/Command.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/src/java/application_ui/CommandFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/src/java/application_ui/CommandFactoryLocal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/src/java/application_ui/DeleteAccountCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/src/java/application_ui/DeleteAccountCommandLocal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/src/java/application_ui/DeliverDeliveryCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/src/java/application_ui/DeliverDeliveryCommandLocal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/src/java/application_ui/DeliverySearchCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/src/java/application_ui/DeliverySearchCommandLocal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/src/java/application_ui/FailDeliveryCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/src/java/application_ui/FailDeliveryCommandLocal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/src/java/application_ui/GetDeliveriesForRouteCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/src/java/application_ui/GetDeliveriesForRouteCommandLocal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/src/java/application_ui/GetDeliveryStatusesCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/src/java/application_ui/GetDeliveryStatusesCommandLocal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/src/java/application_ui/GetDriverDeliveriesCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/src/java/application_ui/GetDriverDeliveriesCommandLocal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/src/java/application_ui/GetRecipientDeliveriesCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/src/java/application_ui/GetRecipientDeliveriesCommandLocal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/src/java/application_ui/GetRoutesCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/src/java/application_ui/GetRoutesCommandLocal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/src/java/application_ui/LoginCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/src/java/application_ui/LoginCommandLocal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/src/java/application_ui/NullObjectCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/src/java/application_ui/NullObjectCommandLocal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/src/java/application_ui/RegisterCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/src/java/application_ui/RegisterCommandLocal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/src/java/application_ui/RescheduleDeliveryCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/src/java/application_ui/RescheduleDeliveryCommandLocal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/src/java/application_ui/SetRouteDeliveriesToOutForDeliveryCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/src/java/application_ui/SetRouteDeliveriesToOutForDeliveryCommandLocal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/src/java/application_ui/UpdateAccountDetailsCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/src/java/application_ui/UpdateAccountDetailsCommandLocal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/src/java/database/DTOConversionGateway.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/src/java/database/DTOConversionGatewayLocal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/src/java/database/DeliveryGateway.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/src/java/database/DeliveryGatewayLocal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/src/java/database/DeliveryStatusGateway.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/src/java/database/DeliveryStatusGatewayLocal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/src/java/database/RouteGateway.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/src/java/database/RouteGatewayLocal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/src/java/database/UserGateway.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/src/java/database/UserGatewayLocal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/src/java/ejb/DeliveryHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/src/java/ejb/DeliveryHandlerLocal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/src/java/ejb/DeliveryStatusHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/src/java/ejb/DeliveryStatusHandlerLocal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/src/java/ejb/DriverUI.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/src/java/ejb/RouteHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/src/java/ejb/RouteHandlerLocal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/src/java/ejb/UserHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/src/java/ejb/UserHandlerLocal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/src/java/ejb/User_UI.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/src/java/entity/Delivery.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/src/java/entity/DeliveryStatus.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/src/java/entity/Depot.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/src/java/entity/Parcel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/src/java/entity/Route.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-ejb/src/java/entity/Users.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/build.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/build/lib/EEA_Assignment1_Library.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/build/lib/javaee-api-7.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/build/lib/javax.annotation-api.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/build/lib/javax.xml.soap-api.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/build/lib/jaxb-api-osgi.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/build/lib/jaxws-api.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/build/lib/jsr181-api.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/build/web/Layout.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/build/web/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/build/web/WEB-INF/classes/.netbeans_automatic_build" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/build/web/WEB-INF/classes/.netbeans_update_resources" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/build/web/WEB-INF/classes/filter/CheckLoggedIn.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/build/web/WEB-INF/classes/managed_bean/AccountDetailsViewBean.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/build/web/WEB-INF/classes/managed_bean/BookCollectionBean.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/build/web/WEB-INF/classes/managed_bean/DateConverter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/build/web/WEB-INF/classes/managed_bean/DateValidator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/build/web/WEB-INF/classes/managed_bean/DeliverySearchBean.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/build/web/WEB-INF/classes/managed_bean/DriverCollectLocationViewBean.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/build/web/WEB-INF/classes/managed_bean/DriverDeliveriesViewBean.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/build/web/WEB-INF/classes/managed_bean/ExpandedDeliveryViewBean.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/build/web/WEB-INF/classes/managed_bean/LoginBean.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/build/web/WEB-INF/classes/managed_bean/RecipientDeliveriesViewBean.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/build/web/WEB-INF/classes/managed_bean/RegisterBean.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/build/web/WEB-INF/classes/managed_bean/RescheduleDeliveryBean.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/build/web/WEB-INF/classes/managed_bean/UpdateDeliveryStatusBean.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/build/web/WEB-INF/classes/managed_bean/UserValidator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/build/web/WEB-INF/classes/web_services/ApplicationConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/build/web/WEB-INF/classes/web_services/DriverUIResource.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/build/web/WEB-INF/classes/web_services/UserUIResource.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/build/web/WEB-INF/faces-config.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/build/web/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/build/web/accountDetailsView.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/build/web/app.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/build/web/bookCollection.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/build/web/cc.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/build/web/cg.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/build/web/collapse.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/build/web/css_master-all.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/build/web/deliverySearch.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/build/web/driverCollectLocationView.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/build/web/driverDeliveriesView.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/build/web/expand.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/build/web/expandedDeliveryView.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/build/web/images/background_border_bottom.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/build/web/images/bg_gradient.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/build/web/images/level1_deselect.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/build/web/images/level1_selected-1lvl.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/build/web/images/masthead.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/build/web/images/masthead_link_enabled.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/build/web/images/masthead_link_roll.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/build/web/images/pbdis.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/build/web/images/pbena.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/build/web/images/pbmou.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/build/web/images/pbsel.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/build/web/images/pname.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/build/web/images/primary-enabled.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/build/web/images/primary-roll.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/build/web/images/secondary-enabled.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/build/web/images/tbsel.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/build/web/images/tbuns.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/build/web/index.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/build/web/item.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/build/web/login.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/build/web/og.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/build/web/recipientDeliveriesView.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/build/web/register.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/build/web/rescheduleDelivery.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/build/web/resources/css/cssLayout.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/build/web/resources/css/default.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/build/web/resources/images/HomeImage.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/build/web/test-resbeans.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/build/web/test-resbeans.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/build/web/test-resbeans.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/build/web/updateDeliveryStatus.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/dist/EEA_Assignment1_J016984C-war.war" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/nbproject/ant-deploy.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/nbproject/build-impl.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/nbproject/faces-config.NavData" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/nbproject/genfiles.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/nbproject/private/private.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/nbproject/private/private.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/nbproject/project.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/nbproject/project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/nbproject/rest-build.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/src/conf/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/src/java/filter/CheckLoggedIn.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/src/java/managed_bean/AccountDetailsViewBean.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/src/java/managed_bean/BookCollectionBean.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/src/java/managed_bean/DateConverter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/src/java/managed_bean/DateValidator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/src/java/managed_bean/DeliverySearchBean.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/src/java/managed_bean/DriverCollectLocationViewBean.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/src/java/managed_bean/DriverDeliveriesViewBean.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/src/java/managed_bean/ExpandedDeliveryViewBean.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/src/java/managed_bean/LoginBean.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/src/java/managed_bean/RecipientDeliveriesViewBean.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/src/java/managed_bean/RegisterBean.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/src/java/managed_bean/RescheduleDeliveryBean.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/src/java/managed_bean/UpdateDeliveryStatusBean.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/src/java/managed_bean/UserValidator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/src/java/web_services/ApplicationConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/src/java/web_services/DriverUIResource.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/src/java/web_services/UserUIResource.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/web/Layout.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/web/WEB-INF/faces-config.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/web/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/web/accountDetailsView.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/web/app.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/web/bookCollection.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/web/cc.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/web/cg.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/web/collapse.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/web/css_master-all.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/web/deliverySearch.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/web/driverCollectLocationView.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/web/driverDeliveriesView.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/web/expand.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/web/expandedDeliveryView.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/web/images/background_border_bottom.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/web/images/bg_gradient.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/web/images/level1_deselect.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/web/images/level1_selected-1lvl.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/web/images/masthead.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/web/images/masthead_link_enabled.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/web/images/masthead_link_roll.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/web/images/pbdis.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/web/images/pbena.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/web/images/pbmou.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/web/images/pbsel.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/web/images/pname.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/web/images/primary-enabled.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/web/images/primary-roll.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/web/images/secondary-enabled.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/web/images/tbsel.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/web/images/tbuns.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/web/index.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/web/item.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/web/login.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/web/og.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/web/recipientDeliveriesView.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/web/register.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/web/rescheduleDelivery.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/web/resources/css/cssLayout.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/web/resources/css/default.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/web/resources/images/HomeImage.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/web/test-resbeans.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/web/test-resbeans.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/web/test-resbeans.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_J016984C-war/web/updateDeliveryStatus.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_Library/build.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_Library/dist/EEA_Assignment1_Library.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_Library/nbproject/build-impl.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_Library/nbproject/genfiles.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_Library/nbproject/private/private.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_Library/nbproject/private/private.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_Library/nbproject/project.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_Library/nbproject/project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_Library/src/dto/DeliveryDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_Library/src/dto/DeliveryStatusDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_Library/src/dto/DepotDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_Library/src/dto/ParcelDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_Library/src/dto/RouteDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_Library/src/dto/UserDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_Library/src/ejb/DriverUIRemote.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_Library/src/ejb/User_UIRemote.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_Library/test/dto/DeliveryDTOIT.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_Library/test/dto/DeliveryStatusDTOIT.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_Library/test/dto/DepotDTOIT.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_Library/test/dto/ParcelDTOIT.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_Library/test/dto/RouteDTOIT.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/EEA_Assignment1_Library/test/dto/UserDTOIT.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/build.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/build/EEA_Assignment1_J016984C-ejb.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/build/EEA_Assignment1_J016984C-war.war" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/build/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/build/lib/EEA_Assignment1_Library.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/build/lib/derby.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/build/lib/derbyclient.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/build/lib/derbynet.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/build/lib/javaee-api-7.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/build/lib/javax.annotation-api.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/build/lib/javax.xml.soap-api.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/build/lib/jaxb-api-osgi.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/build/lib/jaxws-api.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/build/lib/jsr181-api.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/build/lib/org-netbeans-libs-javacapi.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/nbproject/ant-deploy.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/nbproject/build-impl.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/nbproject/genfiles.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/nbproject/private/private.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/nbproject/private/private.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/nbproject/project.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/nbproject/project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment_Project/EEA_Assignment1_J016984C/src/conf/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/proguard-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/com/example/esa_assignment2_delivery_system/ExampleInstrumentedTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/esa_assignment2_delivery_system/DTO/DeliveryDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/esa_assignment2_delivery_system/DTO/DeliveryStatusDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/esa_assignment2_delivery_system/DTO/DepotDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/esa_assignment2_delivery_system/DTO/ParcelDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/esa_assignment2_delivery_system/DTO/RouteDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/esa_assignment2_delivery_system/DTO/UserDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/esa_assignment2_delivery_system/JSONConverter/StringToDateConverter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/esa_assignment2_delivery_system/MainActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/esa_assignment2_delivery_system/SharedPreferencesHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/esa_assignment2_delivery_system/services/DeliveryService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/esa_assignment2_delivery_system/services/DeliveryServiceAPIInterface.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/esa_assignment2_delivery_system/ui/home/HomeFragment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/esa_assignment2_delivery_system/ui/home/HomeViewModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/esa_assignment2_delivery_system/ui/login/LoginFragment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/esa_assignment2_delivery_system/ui/login/LoginViewModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/esa_assignment2_delivery_system/ui/navigation/NavigationSlider.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/esa_assignment2_delivery_system/ui/register/RegisterFragment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/esa_assignment2_delivery_system/ui/register/RegisterViewModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/esa_assignment2_delivery_system/validation/InputValidator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-v21/ic_menu_camera.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-v21/ic_menu_gallery.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-v21/ic_menu_slideshow.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_launcher_background.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/menu_home.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/menu_login.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/menu_register.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/side_nav_bar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/app_bar_main.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/content_main.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_login.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_register.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/nav_header_main.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/menu/activity_main_drawer.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/menu/main.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/navigation/mobile_navigation.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-v21/styles.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/drawables.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/xml/network_security_config.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/java/com/example/esa_assignment2_delivery_system/ExampleUnitTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../J016984C_EEA_USDP.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../J016984C_EEA_USE_CASE.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SQL/Insert Data/Delivery_Inserts.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SQL/Insert Data/Delivery_Status_Inserts.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SQL/Insert Data/Depot_Inserts.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SQL/Insert Data/Insert_All_Data.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SQL/Insert Data/Parcel_Inserts.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SQL/Insert Data/Route_Inserts.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SQL/Insert Data/User_Inserts.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SQL/Table Creation SQL/CREATE_DATABASE_SQL.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SQL/Table Creation SQL/DELIVERY_STATUS_TABLE_SQL.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SQL/Table Creation SQL/DELIVERY_TABLE_SQL.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SQL/Table Creation SQL/DEPOT_TABLE_SQL.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SQL/Table Creation SQL/PARCEL_TABLE_SQL.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SQL/Table Creation SQL/ROUTE_TABLE_SQL.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SQL/Table Creation SQL/USERS_TABLE_SQL.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Tutorial/EEA" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Tutorial/EEA" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="Pixel_2_API_28" />
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="navigationResourceFile" />
+        <option value="resourceFile" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
+  </component>
+  <component name="ProjectId" id="1aXX8m8QybTl97TWN03rGM5ia12" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="Pixel_2_API_28" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2020-04-15T13:05:10.289Z" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../J016984C - Assignment2 - Rhys Jones/EEA_Assignment2_Android" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.17" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+  </component>
+  <component name="PsdUISettings">
+    <option name="MODULE_TAB" value="Default Config" />
+    <option name="LAST_EDITED_BUILD_TYPE" value="release" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.example.esa_assignment2_delivery_system" />
+    </key>
+    <key name="android.template.packageName">
+      <recent name="com.example.esa_assignment2_delivery_system.ui.deliveries" />
+      <recent name="com.example.esa_assignment2_delivery_system" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
+      <module name="app" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Hybrid>
+      <Java />
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sample Java Methods" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9bd8418c-47fb-4751-ab00-0f90a0a0ad89" name="Default Changelist" comment="" />
+      <created>1586882754892</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1586882754892</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/esa_assignment2_delivery_system/database/DeliverySystemDbOpenHelper.java</url>
+          <line>57</line>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/esa_assignment2_delivery_system/providers/DeliverySystemProvider.java</url>
+          <line>361</line>
+          <option name="timeStamp" value="105" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/esa_assignment2_delivery_system/providers/DeliverySystemProvider.java</url>
+          <line>199</line>
+          <option name="timeStamp" value="106" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/esa_assignment2_delivery_system/providers/DeliverySystemProviderHandler.java</url>
+          <line>89</line>
+          <option name="timeStamp" value="109" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/esa_assignment2_delivery_system/providers/DeliverySystemProviderHandler.java</url>
+          <line>123</line>
+          <option name="timeStamp" value="110" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

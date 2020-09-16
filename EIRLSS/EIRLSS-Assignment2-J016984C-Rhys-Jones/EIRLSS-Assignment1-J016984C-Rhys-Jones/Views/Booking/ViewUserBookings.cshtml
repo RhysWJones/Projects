@@ -1,0 +1,95 @@
+﻿@model EIRLSS_Assignment1_J016984C_Rhys_Jones.ViewModels.ViewUserBookingsViewModel
+@{
+    ViewData["Title"] = "ViewUserBooking";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Your Bookings</h1>
+<div asp-validation-summary="All" class="text-danger"></div>
+
+<div class="row">
+    @if (Model.UserBookingModels.Count > 0)
+    {
+        <div class="col-sm-12">
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>#</th>
+                        <th>Vehicle</th>
+                        <th>Booked From</th>
+                        <th>Booked Until</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                @for (int i = 0; i < Model.UserBookingModels.Count; i++)
+                {
+                    if (Model.UserBookingModels[i].NotCollected == true)
+                    {
+                        <tbody>
+                            <tr class="table-danger">
+                                <th scope="row">@(i + 1)</th>
+                                <td>@Model.UserBookingModels[i].VehicleBooked</td>
+                                <td>@Model.UserBookingModels[i].StartDate.ToString("dd/MM/yyyy")</td>
+                                <td>@Model.UserBookingModels[i].EndDate.ToString("dd/MM/yyyy")</td>
+                                <td>@Model.UserBookingModels[i].Price.ToString("C2")</td>
+                                <td>
+                                    <form>
+                                        <input type="hidden" class="form-check-input" value="@Model.UserBookingModels[i].BookingId">
+                                    </form>
+                                </td>
+                            </tr>
+                        </tbody>
+                    }
+                    else if (@Model.UserBookingModels[i].IsCurrentlyOnRental == true)
+                    {
+                        <tbody>
+                            <tr class="table-warning">
+                                <th scope="row">@(i + 1)</th>
+                                <td>@Model.UserBookingModels[i].VehicleBooked</td>
+                                <td>@Model.UserBookingModels[i].StartDate.ToString("dd/MM/yyyy")</td>
+                                <td>@Model.UserBookingModels[i].EndDate.ToString("dd/MM/yyyy")</td>
+                                <td>@Model.UserBookingModels[i].Price.ToString("C2")</td>
+                                <td>
+                                    <form>
+                                        <input type="hidden" class="form-check-input" value="Model.VehicleBookingModels[i].BookingId">
+                                        <button type="submit" class="btn btn-primary btn-sm" asp-area="" asp-controller="Booking" asp-action="EditBooking" asp-route-id="@Model.UserBookingModels[i].BookingId">Edit</button>
+                                    </form>
+                                </td>
+                            </tr>
+                        </tbody>
+                    }
+                    else
+                    {
+                        <tbody>
+                            <tr>
+                                <th scope="row">@(i + 1)</th>
+                                <td>@Model.UserBookingModels[i].VehicleBooked</td>
+                                <td>@Model.UserBookingModels[i].StartDate.ToString("dd/MM/yyyy")</td>
+                                <td>@Model.UserBookingModels[i].EndDate.ToString("dd/MM/yyyy")</td>
+                                <td>@Model.UserBookingModels[i].Price.ToString("C2")</td>
+                                <td>
+                                    <form>
+                                        <input type="hidden" class="form-check-input" value="Model.VehicleBookingModels[i].BookingId">
+                                        <button type="submit" class="btn btn-danger btn-sm" asp-area="" asp-controller="Booking" asp-action="DeleteBooking" asp-route-id="@Model.UserBookingModels[i].BookingId">Delete</button>
+                                        <button type="submit" class="btn btn-primary btn-sm" asp-area="" asp-controller="Booking" asp-action="EditBooking" asp-route-id="@Model.UserBookingModels[i].BookingId">Edit</button>
+                                    </form>
+                                </td>
+                            </tr>
+                        </tbody>
+                    }
+                }
+            </table>
+        </div>
+    }
+    else
+    {
+        <div class="col-sm-9">
+            <span class="badge badge-warning" offset-sm-2>Warning</span>
+            <p>There are no bookings to display.</p>
+        </div>
+    }
+</div>
+
+
+
+

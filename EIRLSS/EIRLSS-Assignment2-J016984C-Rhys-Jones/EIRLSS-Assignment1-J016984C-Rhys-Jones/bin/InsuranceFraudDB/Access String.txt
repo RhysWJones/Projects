@@ -1,0 +1,1 @@
+Scaffold-DbContext -Connection "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=F:\UNI-LEVEL_6\EIRLSS\EIRLSS_Assignment_2_J016984C_Rhys_Jones\Insurance Access DB\ABI_DRIVER_FRAUD1.accdb;" -Provider EntityFrameworkCore.Jet

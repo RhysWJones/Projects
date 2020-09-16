@@ -1,0 +1,44 @@
+QUESTION 1.
+===========
+
+Modify your Message class to support threads. 
+The run() method should execute when the thread starts.  
+Modify your test driver so that each instance of the Message class is asked to run on a separate thread.  
+Is there any difference in output from the testing in question 1?
+
+ANSWER.
+=======
+
+The output is not in the order which they are run in, and the order is inconsistent each time. 
+
+
+QUESTION 2.
+===========
+
+Now add a sleep in the loop within the run() method to make the loop take longer than a single time slice.
+Repeat the testing.   
+What is the difference in output? { You may need to increase the sleep time gradually until you see a change in the output. }  
+Can you explain what is happening?
+
+ANSWER.
+=======
+
+The program outputs each message that is waiting on it's own thread, so for example in the beginning i have 3 threads, it outputs all 3 messages,
+the second time there are only 2 threads, so it outputs both of those messages, and finally the system waits the specified number of milliseconds 
+before it outputs the messages in the final thread.
+
+
+QUESTION 3.
+===========
+
+Now modify the sleep so that the time to sleep is chosen at random.  
+Repeat the testing.  
+What is the difference in output?  
+Can you explain what is happening?
+
+ANSWER.
+=======
+
+The program prints the threads in an inconsistent order, and it prints the threads at different times, due to each thread having it's own set amount of time to sleep.
+This amount of time changes for the same thread each time the message is printed, because thread.sleep is within the iteration, and therefore is a different number
+after each iteration.

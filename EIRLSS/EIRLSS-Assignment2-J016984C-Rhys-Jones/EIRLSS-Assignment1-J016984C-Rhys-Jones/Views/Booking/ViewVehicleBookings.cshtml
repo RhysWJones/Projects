@@ -1,0 +1,112 @@
+﻿@model EIRLSS_Assignment1_J016984C_Rhys_Jones.ViewModels.ViewVehicleBookingsViewModel
+@{
+    ViewData["Title"] = "ViewVehicleBookings";
+}
+
+    <h1>@ViewBag.ChosenVehicle.Manufacturer @ViewBag.ChosenVehicle.Model Bookings</h1>
+    <div asp-validation-summary="All" class="text-danger"></div>
+
+    <div class="row">
+        <div class="col-sm-3">
+            <div class="card">
+                <img class="card-img-top" src="~/Images/Vehicles/@ViewBag.ChosenVehicle.VehicleImageSource" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">@(((decimal)ViewBag.ChosenVehicle.CostPerDay).ToString("C2"))/day</h5>
+                    <p class="card-text">@ViewBag.ChosenVehicle.Manufacturer @ViewBag.ChosenVehicle.Model</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">@ViewBag.ChosenVehicle.Colour</li>
+                    <li class="list-group-item">@ViewBag.ChosenVehicle.Transmission.Type</li>
+                    <li class="list-group-item">@ViewBag.ChosenVehicle.Fuel.Type</li>
+                </ul>
+            </div>
+        </div>
+        @if (Model.VehicleBookingModels.Count > 0)
+        {
+            <div class="col-sm-9">
+                <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>#</th>
+                            <th>Booked By</th>
+                            <th>Booked From</th>
+                            <th>Booked Until</th>
+                        </tr>
+                    </thead>
+                    @for (int i = 0; i < Model.VehicleBookingModels.Count; i++)
+                    {
+                        if (Model.VehicleBookingModels[i].NotCollected == true)
+                        {
+                            <tbody>
+                                <tr class="table-danger">
+                                    <th scope="row">@(i + 1)</th>
+                                    <td>@Model.VehicleBookingModels[i].BookedBy</td>
+                                    <td>@Model.VehicleBookingModels[i].StartDate.ToString("dd/MM/yyyy")</td>
+                                    <td>@Model.VehicleBookingModels[i].EndDate.ToString("dd/MM/yyyy")</td>
+                                    <td>
+                                        <form>
+                                            <input type="hidden" class="form-check-input" value="Model.VehicleBookingModels[i].BookingId">
+                                            <input type="hidden" class="form-check-input" value="Model.VehicleBookingModels[i].UserId">
+                                            <button type="submit" class="btn btn-warning btn-sm" asp-area="" asp-controller="Account" asp-action="BlacklistUser" asp-route-id="@Model.VehicleBookingModels[i].UserId">Blacklist User</button>
+                                            <button type="submit" class="btn btn-danger btn-sm" asp-area="" asp-controller="Booking" asp-action="DeleteBooking" asp-route-id="@Model.VehicleBookingModels[i].BookingId">Delete</button>
+                                            <button type="submit" class="btn btn-primary btn-sm" asp-area="" asp-controller="Booking" asp-action="EditBooking" asp-route-id="@Model.VehicleBookingModels[i].BookingId">Edit</button>
+                                            <button type="submit" class="btn btn-success btn-sm" asp-area="" asp-controller="Booking" asp-action="CollectBooking" asp-route-id="@Model.VehicleBookingModels[i].BookingId">Collected</button>
+                                        </form>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        }
+                        else if (Model.VehicleBookingModels[i].IsCurrentlyOnRental == true)
+                        {
+                            <tbody>
+                                <tr class="table-warning">
+                                    <th scope="row">@(i + 1)</th>
+                                    <td>@Model.VehicleBookingModels[i].BookedBy</td>
+                                    <td>@Model.VehicleBookingModels[i].StartDate.ToString("dd/MM/yyyy")</td>
+                                    <td>@Model.VehicleBookingModels[i].EndDate.ToString("dd/MM/yyyy")</td>
+                                    <td>
+                                        <form>
+                                            <input type="hidden" class="form-check-input" value="Model.VehicleBookingModels[i].BookingId">
+                                            <button type="submit" class="btn btn-primary btn-sm" asp-area="" asp-controller="Booking" asp-action="EditBooking" asp-route-id="@Model.VehicleBookingModels[i].BookingId">Edit</button>
+                                        </form>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        }
+                        else
+                        {
+                            <tbody>
+                                <tr>
+                                    <th scope="row">@(i + 1)</th>
+                                    <td>@Model.VehicleBookingModels[i].BookedBy</td>
+                                    <td>@Model.VehicleBookingModels[i].StartDate.ToString("dd/MM/yyyy")</td>
+                                    <td>@Model.VehicleBookingModels[i].EndDate.ToString("dd/MM/yyyy")</td>
+                                    <td>
+                                        <form>
+                                            <input type="hidden" class="form-check-input" value="Model.VehicleBookingModels[i].BookingId">
+                                            <input type="hidden" class="form-check-input" value="Model.VehicleBookingModels[i].UserId">
+                                            <button type="submit" class="btn btn-warning btn-sm" asp-area="" asp-controller="Account" asp-action="BlacklistUser" asp-route-id="@Model.VehicleBookingModels[i].UserId">Blacklist User</button>
+                                            <button type="submit" class="btn btn-danger btn-sm" asp-area="" asp-controller="Booking" asp-action="DeleteBooking" asp-route-id="@Model.VehicleBookingModels[i].BookingId">Delete</button>
+                                            <button type="submit" class="btn btn-primary btn-sm" asp-area="" asp-controller="Booking" asp-action="EditBooking" asp-route-id="@Model.VehicleBookingModels[i].BookingId">Edit</button>
+                                            <button type="submit" class="btn btn-success btn-sm" asp-area="" asp-controller="Booking" asp-action="CollectBooking" asp-route-id="@Model.VehicleBookingModels[i].BookingId">Collected</button>
+                                        </form>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        }
+                    }
+                </table>
+            </div>
+        }
+        else
+        {
+            <div class="col-sm-9">
+                <span class="badge badge-warning" offset-sm-2>Warning</span>
+                <p>There are no bookings for the chosen vehicle.</p>
+            </div>
+        }
+    </div>
+
+
+
+

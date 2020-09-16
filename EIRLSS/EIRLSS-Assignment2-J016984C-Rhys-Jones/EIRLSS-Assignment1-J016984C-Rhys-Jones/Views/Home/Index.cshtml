@@ -1,0 +1,65 @@
+﻿@model EIRLSS_Assignment1_J016984C_Rhys_Jones.ViewModels.HomeViewModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="row">
+    <div class="col-sm-12 mb-5">
+        <div class="card">
+            <img class="card-img-top" src="~/Images/Banners/Banger_Rent_Main.jpg" alt="Card image cap"> <!--This image was taken from http://www.kalina.rent/ and slightly modified.-->
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="card-deck">
+        @foreach (Vehicle Vehicle in Model.Vehicles)
+        {
+            if (@Model.Age < 25 && Vehicle.VehicleType.Size == "Small Town Car" && User.IsInRole("User"))
+            {
+                <div class="col-sm-3 mb-3">
+                    <div class="card">
+                        <img class="card-img-top" src="~/Images/Vehicles/@Vehicle.VehicleImageSource" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">@Html.DisplayFor(Model => Vehicle.CostPerDay)/day</h5>
+                            <p class="card-text">@Vehicle.Manufacturer @Vehicle.Model</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">@Vehicle.Colour</li>
+                            <li class="list-group-item">@Vehicle.Transmission.Type</li>
+                            <li class="list-group-item">@Vehicle.Fuel.Type</li>
+                        </ul>
+                        <a class="btn btn-primary" asp-area="" asp-controller="Booking" asp-action="BookVehicle" asp-route-id="@Vehicle.Id">Book This Vehicle</a>
+                    </div>
+                </div>
+            }
+            else if (@Model.Age >= 25 || User.IsInRole("Admin") || User.Identity.IsAuthenticated == false)
+            {
+                <div class="col-sm-3 mb-3">
+                    <div class="card">
+                        <img class="card-img-top" src="~/Images/Vehicles/@Vehicle.VehicleImageSource" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">@Html.DisplayFor(Model => Vehicle.CostPerDay)/day</h5>
+                            <p class="card-text">@Vehicle.Manufacturer @Vehicle.Model</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">@Vehicle.Colour</li>
+                            <li class="list-group-item">@Vehicle.Transmission.Type</li>
+                            <li class="list-group-item">@Vehicle.Fuel.Type</li>
+                        </ul>
+                        @if (User.IsInRole("Admin"))
+                        {
+                            <a class="btn btn-primary" asp-area="" asp-controller="Booking" asp-action="ViewVehicleBookings" asp-route-id="@Vehicle.Id">View Bookings</a>
+                            <a class="btn btn-primary" asp-area="" asp-controller="PriceMatch" asp-action="UpdateVehicleComparisonSource" asp-route-id="@Vehicle.Id">Choose Comparison Source</a>
+                        }
+                        else
+                        {
+                            <a class="btn btn-primary" asp-area="" asp-controller="Booking" asp-action="BookVehicle" asp-route-id="@Vehicle.Id">Book This Vehicle</a>
+                        }
+                    </div>
+                </div>
+            }
+        }
+
+    </div>
+</div>

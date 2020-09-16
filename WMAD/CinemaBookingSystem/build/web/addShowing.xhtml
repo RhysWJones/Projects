@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title></title>
+    </h:head>
+    <h:body>
+        <ui:composition template="/template.xhtml" >
+            <ui:define name="page-title">Add Showing Page</ui:define>
+
+            <ui:define name="content">
+                <h:form>
+                    <h:panelGrid columns="2">
+                        <p>Time for Showing in format hh:mm:ss: </p>
+                        <h:inputText value="#{AddShowingBean.time}"
+                                     required="true"
+                                     requiredMessage="Please enter the time in the format hh:mm:ss." />
+                    </h:panelGrid>
+                    
+                    <p><h:commandButton type="submit" value="Back" action="Back"/> </p>
+                    <p><h:commandButton type="submit" value="Log Off" action="#{LoginBean.logOff()}" rendered="#{sessionScope.loggedAdmin != null}"/> </p>
+                    <p><h:commandButton type="submit" value="Add" action="#{AddShowingBean.addShowing()}"/> </p>
+                </h:form>
+            </ui:define>
+        </ui:composition>
+    </h:body>
+</html>
+

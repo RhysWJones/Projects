@@ -1,0 +1,279 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<faces-config version="2.2"
+              xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd">
+
+    <navigation-rule>
+        <from-view-id>/register.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>registered</from-outcome>
+            <to-view-id>/login.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>loggedOut</from-outcome>
+            <to-view-id>/index.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    
+    <navigation-rule>
+        <from-view-id>/login.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>loggedIn</from-outcome>
+            <to-view-id>/index.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>loggedOut</from-outcome>
+            <to-view-id>/index.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    
+    <navigation-rule>
+        <from-view-id>/index.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>loggedOut</from-outcome>
+            <to-view-id>/index.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>Display Recipient Deliveries</from-outcome>
+            <to-view-id>/recipientDeliveriesView.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>Display Account Details</from-outcome>
+            <to-view-id>/accountDetailsView.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>Display Route Selection</from-outcome>
+            <to-view-id>/driverCollectLocationView.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>Display Driver Deliveries</from-outcome>
+            <to-view-id>/driverDeliveriesView.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    
+    <navigation-rule>
+        <from-view-id>/deliverySearch.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>Expand Delivery</from-outcome>
+            <to-view-id>/expandedDeliveryView.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>Display Recipient Deliveries</from-outcome>
+            <to-view-id>/recipientDeliveriesView.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>Display Account Details</from-outcome>
+            <to-view-id>/accountDetailsView.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>Display Route Selection</from-outcome>
+            <to-view-id>/driverCollectLocationView.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>loggedOut</from-outcome>
+            <to-view-id>/index.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>Display Driver Deliveries</from-outcome>
+            <to-view-id>/driverDeliveriesView.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    
+    <navigation-rule>
+        <from-view-id>/expandedDeliveryView.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>Reschedule Delivery</from-outcome>
+            <to-view-id>/rescheduleDelivery.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>Collect Delivery</from-outcome>
+            <to-view-id>/bookCollection.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>Cancellation Requested</from-outcome>
+            <to-view-id>/index.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>Display Recipient Deliveries</from-outcome>
+            <to-view-id>/recipientDeliveriesView.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>Display Account Details</from-outcome>
+            <to-view-id>/accountDetailsView.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>Display Route Selection</from-outcome>
+            <to-view-id>/driverCollectLocationView.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>loggedOut</from-outcome>
+            <to-view-id>/index.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>Display Driver Deliveries</from-outcome>
+            <to-view-id>/driverDeliveriesView.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>Change Delivery Status</from-outcome>
+            <to-view-id>/updateDeliveryStatus.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>Status Updated</from-outcome>
+            <to-view-id>/index.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    
+    <navigation-rule>
+        <from-view-id>/bookCollection.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>Success</from-outcome>
+            <to-view-id>/index.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>Display Recipient Deliveries</from-outcome>
+            <to-view-id>/recipientDeliveriesView.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>Display Account Details</from-outcome>
+            <to-view-id>/accountDetailsView.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>loggedOut</from-outcome>
+            <to-view-id>/index.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    
+    <navigation-rule>
+        <from-view-id>/rescheduleDelivery.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>Success</from-outcome>
+            <to-view-id>/index.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>Display Recipient Deliveries</from-outcome>
+            <to-view-id>/recipientDeliveriesView.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>Display Account Details</from-outcome>
+            <to-view-id>/accountDetailsView.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>loggedOut</from-outcome>
+            <to-view-id>/index.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    
+    <navigation-rule>
+        <from-view-id>/recipientDeliveriesView.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>Expand Delivery</from-outcome>
+            <to-view-id>/expandedDeliveryView.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>Display Account Details</from-outcome>
+            <to-view-id>/accountDetailsView.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>loggedOut</from-outcome>
+            <to-view-id>/index.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    
+    <navigation-rule>
+        <from-view-id>/accountDetailsView.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>Account Updated</from-outcome>
+            <to-view-id>/index.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>Display Recipient Deliveries</from-outcome>
+            <to-view-id>/recipientDeliveriesView.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>Account Deleted</from-outcome>
+            <to-view-id>/index.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>Display Route Selection</from-outcome>
+            <to-view-id>/driverCollectLocationView.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>loggedOut</from-outcome>
+            <to-view-id>/index.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>Display Driver Deliveries</from-outcome>
+            <to-view-id>/driverDeliveriesView.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    
+    <navigation-rule>
+        <from-view-id>/driverCollectLocationView.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>Display Route Selection</from-outcome>
+            <to-view-id>/driverCollectLocationView.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>loggedOut</from-outcome>
+            <to-view-id>/index.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>Display Account Details</from-outcome>
+            <to-view-id>/accountDetailsView.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>Display Driver Deliveries</from-outcome>
+            <to-view-id>/driverDeliveriesView.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    
+    <navigation-rule>
+        <from-view-id>/driverDeliveriesView.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>Display Driver Deliveries</from-outcome>
+            <to-view-id>/driverDeliveriesView.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>Display Route Selection</from-outcome>
+            <to-view-id>/driverCollectLocationView.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>loggedOut</from-outcome>
+            <to-view-id>/index.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>Display Account Details</from-outcome>
+            <to-view-id>/accountDetailsView.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>Expand Delivery</from-outcome>
+            <to-view-id>/expandedDeliveryView.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    
+    <navigation-rule>
+        <from-view-id>/updateDeliveryStatus.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>Display Driver Deliveries</from-outcome>
+            <to-view-id>/driverDeliveriesView.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>Display Route Selection</from-outcome>
+            <to-view-id>/driverCollectLocationView.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>loggedOut</from-outcome>
+            <to-view-id>/index.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>Display Account Details</from-outcome>
+            <to-view-id>/accountDetailsView.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>Status Updated</from-outcome>
+            <to-view-id>/index.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    
+</faces-config>

@@ -1,0 +1,10 @@
+INSERT INTO J016984C.FILM (TITLE, AGE_RATING, RUNTIME, DESCRIPTION) 
+	VALUES ('STAR WARS: THE LAST JEDI', 12, 150, 'In the everlasting battle between dark and light, Rey’s intergalactic journey continues Following on from the events of The Force Awakens, The Last Jedi sees Rey (Daisy Ridley) continue her epic journey from humble beginnings as a scavenger on Jakku to becoming entangled with the First Order.');
+INSERT INTO J016984C.FILM (TITLE, AGE_RATING, RUNTIME, DESCRIPTION) 
+	VALUES ('DADDY’S HOME 2', 12, 100, 'Brad and Dusty have set their differences aside, but the unexpected arrival of their own fathers poses a new problem and throws their peaceful family Christmas into jeopardy.');
+INSERT INTO J016984C.FILM (TITLE, AGE_RATING, RUNTIME, DESCRIPTION) 
+	VALUES ('JUSTICE LEAGUE', 12, 120, 'Batman and Wonder Woman call on other metahumans to unite against a common enemy…');
+INSERT INTO J016984C.FILM (TITLE, AGE_RATING, RUNTIME, DESCRIPTION) 
+	VALUES ('JUMANJI: WELCOME TO THE JUNGLE', 12, 119, 'When four kids dust off an old video game and begin to play ‘Jumanji’, they quickly realise this is not a normal game. It’s a game of survival, where only the winners return to the real world.');
+INSERT INTO J016984C.FILM (TITLE, AGE_RATING, RUNTIME, DESCRIPTION) 
+	VALUES ('THOR: RAGNAROK', 12, 130, 'Thor faces up to his biggest challenge yet, as he prepares to stop the wicked Hela from destroying his home and the entire Asgardian civilisation. But, first he must break free from imprisonment and retrieve his mighty hammer…');

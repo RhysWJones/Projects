@@ -1,0 +1,263 @@
+﻿@model AnimalCareSystem.ViewModels.UserProfileViewModel;
+
+@{
+    ViewData["Title"] = "User Profile";
+}
+
+<div class="container m-4 pb-3">
+
+    <div class="row">
+
+        <div class="col-sm-3">
+            <div class="card border-0 mb-3 sticky-top">
+                @if (Model.PhotoFolderSource == null || Model.PhotoFolderSource.Equals(""))
+                {
+                    <img src="~/Images/User_Images/Default/default_user_image.png" class="card-img-top rounded-circle" alt="...">
+                }
+                else
+                {
+                    <img src="@Url.Content(Model.PhotoFolderSource)" class="card-img-top rounded-circle" alt="Profile Image">
+                }
+
+                <div class="card-body">
+                    <h5 class="card-title">@Model.Forename @Model.Surname</h5>
+                    @if (Model.Carer == true)
+                    {
+                        <p class="card-text">Carer</p>
+                    }
+                    <p class="card-text">@Model.City</p>
+                    @if (Model.NumberOfRecommendations == 1)
+                    {
+                        <p class="card-text">@Model.NumberOfRecommendations Recommendation</p>
+                    }
+                    else if (Model.NumberOfRecommendations > 1)
+                    {
+                        <p class="card-text">@Model.NumberOfRecommendations Recommendations</p>
+                    }
+                </div>
+
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        <div class="custom-control custom-checkbox">
+                            <input class="custom-control-input" asp-for="@Model.AddressVerified" type="checkbox" disabled>
+                            <label class="custom-control-label">Address Verified</label>
+                        </div>
+                    </li>
+
+                    <li class="list-group-item">
+                        <div class="custom-control custom-checkbox">
+                            <input class="custom-control-input" asp-for="@Model.IdentificationVerified" type="checkbox" disabled>
+                            <label class="custom-control-label">Identification Verified</label>
+                        </div>
+                    </li>
+
+                    <li class="list-group-item">
+                        <div class="custom-control custom-checkbox">
+                            <input class="custom-control-input" asp-for="@Model.DBSChecked" type="checkbox" disabled>
+                            <label class="custom-control-label">DBS Checked</label>
+                        </div>
+                    </li>
+
+                    <li class="list-group-item">
+                        <div class="custom-control custom-checkbox">
+                            <input class="custom-control-input" asp-for="@Model.BoardingLicenseVerified" type="checkbox" disabled>
+                            <label class="custom-control-label">Boarding License Verified</label>
+                        </div>
+                    </li>
+                </ul>
+                @if (Model.IsPersonalProfile)
+                {
+                    <div class="card-body">
+                        <a class="card-link" asp-area="" asp-controller="Profile" asp-action="EditProfile" asp-route-userId="@Model.UserId">Edit Profile</a>
+                    </div>
+                }
+                else
+                {
+                    <div class="card-body">
+                        <button type="button" class="btn btn-link" data-toggle="modal" data-target="#exampleModal">
+                            Contact
+                        </button>
+                    </div>
+                }
+
+            </div>
+            <!--End Card-->
+        </div>
+        <!--End Column-->
+
+        <div class="col-sm-9">
+
+            <h3 class="mt-3">
+                About Me
+            </h3>
+
+            <p>
+                @Html.Raw(Model.Description.Replace(Environment.NewLine, "<br/>"))
+            </p>
+
+            @if (Model.Carer)
+            {
+                <h3 class="mt-4">
+                    My Services
+                </h3>
+
+                <ul class="list-group list-group-flush">
+
+                    @for (int i = 0; i < Model.ServiceRates.Count(); i++)
+                    {
+                        if (Model.ServiceRates[i].ServiceName == "Pet Sitting" && Model.ServiceRates[i].Rate > 0)
+                        {
+                            <li class="list-group-item">
+                                <h6>
+                                    Pet Sitting - £@Model.ServiceRates[i].Rate/day
+                                </h6>
+                                <p>
+                                    Caring for your pet in your home.
+                                </p>
+                            </li>
+                        }
+
+                        if (Model.ServiceRates[i].ServiceName == "Pet Boarding" && Model.BoardingLicenseVerified == true && Model.ServiceRates[i].Rate > 0)
+                        {
+                            <li class="list-group-item">
+                                <h6>
+                                    Pet Boarding - £@Model.ServiceRates[i].Rate/day
+                                </h6>
+                                <p>
+                                    Caring for your pet in my home.
+                                </p>
+                            </li>
+                        }
+
+                        if (Model.ServiceRates[i].ServiceName == "Home Visits" && Model.ServiceRates[i].Rate > 0)
+                        {
+                            <li class="list-group-item">
+                                <h6>
+                                    Home Visits - £@Model.ServiceRates[i].Rate/visit
+                                </h6>
+                                <p>
+                                    Visiting your home to feed or play with your pet.
+                                </p>
+                            </li>
+                        }
+
+                        if (Model.ServiceRates[i].ServiceName == "Small Pet Care" && Model.ServiceRates[i].Rate > 0)
+                        {
+                            <li class="list-group-item">
+                                <h6>
+                                    Small Pet Care - £@Model.ServiceRates[i].Rate/day
+                                </h6>
+                                <p>
+                                    Caring for your hamster or other small pets.
+                                </p>
+                            </li>
+                        }
+
+                        if (Model.ServiceRates[i].ServiceName == "Dog Walking" && Model.ServiceRates[i].Rate > 0)
+                        {
+                            <li class="list-group-item">
+                                <h6>
+                                    Dog Walking - £@Model.ServiceRates[i].Rate/walk
+                                </h6>
+                                <p>
+                                    Taking your dog for a 30 minute walk.
+                                </p>
+                            </li>
+                        }
+
+                        if (Model.ServiceRates[i].ServiceName == "House Sitting" && Model.ServiceRates[i].Rate > 0)
+                        {
+                            <li class="list-group-item">
+                                <h6>
+                                    House Sitting - £@Model.ServiceRates[i].Rate/day
+                                </h6>
+                                <p>
+                                    Taking care of your home while you're away.
+                                </p>
+                            </li>
+                        }
+                    }
+                </ul>
+            }
+
+            @if (Model.Reviews.Count > 0)
+            {
+                <h3 class="mt-4">
+                    Reviews
+                </h3>
+
+                @for (int i = 0; i < Model.Reviews.Count; i++)
+                {
+                    <div class="card mb-3">
+                        @if (Model.Reviews[i].Recommended)
+                        {
+                            <h5 class="card-header">
+                                Recommended
+                            </h5>
+                        }
+                        else
+                        {
+                            <h5 class="card-header">
+                                Not-Recommended
+                            </h5>
+                        }
+
+                        <div class="card-body">
+                            <h5 class="card-title">@Model.Reviews[i].Title</h5>
+                            <p class="card-text">@Model.Reviews[i].Description</p>
+                        </div>
+                        <div class="card-footer text-muted">
+                            - @Model.Reviews[i].ReviewingUserForename, @Model.Reviews[i].DateOfReview.ToString()
+                        </div>
+                    </div>
+                    if (i == 3)
+                    {
+                        break;
+                    }
+                }
+
+            }
+
+            <!-- Button trigger modal -->
+            <!--End Column-->
+
+        </div>
+        <!--End Row-->
+    </div>
+    <!--End Container-->
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Contact</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <form id="editProfile" asp-controller="profile" asp-action="contactUser" method="post" enctype="multipart/form-data">
+                    <div class="modal-body">
+                        <label asp-for="EmailSubject">Subject</label>
+                        <input class="form-control" asp-for="EmailSubject" />
+                        <small id="required" class="form-text">* Required.</small>
+                        <span asp-validation-for="EmailSubject" class="text-danger"></span>
+
+                        <div class="form-group">
+                            <label asp-for="EmailBody">Message</label>
+                            <textarea asp-for="EmailBody" class="form-control" id="descriptionEdit" rows="4"></textarea>
+                        </div>
+
+                        <input class="form-control" asp-for="UserId" value="@Model.UserId" hidden/>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Send</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+

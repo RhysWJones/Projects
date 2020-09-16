@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <body>
+
+        <ui:composition template="./Layout.xhtml">
+
+            <ui:define name="content">
+                <h:form>
+                    <label for="depotSelectMenu">Select A Delivery Route</label>
+                    <h:selectOneMenu class="custom-select mb-2" value="#{driverCollectLocationViewBean.chosenRoute}">
+                        <f:selectItems value="#{driverCollectLocationViewBean.routes}" var="route" itemValue="#{route.routeId}" itemLabel="#{route.depot.name} #{route.name}"/>
+                    </h:selectOneMenu>
+                    <h:commandButton class="btn btn-primary mb-5" value="Select Route" action="#{driverCollectLocationViewBean.getDeliveriesForRoute}"/>
+                </h:form>
+
+            <h:form>
+                <h:dataTable class="table mb-2" value="#{driverCollectLocationViewBean.deliveriesOnChosenRoute}" var="delivery">
+
+                    <h:column>
+                        <f:facet name="header">ID</f:facet>
+                        <h:outputText value="#{delivery.deliveryId}"/>
+                    </h:column>
+
+                    <h:column>
+                        <f:facet name="header">Status</f:facet>
+                        <h:outputText value="#{delivery.deliveryStatus.name}"/>
+                    </h:column>
+                    
+                    <h:column>
+                        <f:facet name="header">Recipient</f:facet>
+                        <h:outputText value="#{delivery.parcel.recipientName}"/>
+                    </h:column>
+                    
+                </h:dataTable>
+                
+                <h:commandButton class="btn btn-primary" value="Collect" action="#{driverCollectLocationViewBean.collectDeliveries}" rendered="#{driverCollectLocationViewBean.chosenRoute ne null}"/>
+            </h:form>
+
+        </ui:define>
+
+    </ui:composition>
+
+</body>
+</html>

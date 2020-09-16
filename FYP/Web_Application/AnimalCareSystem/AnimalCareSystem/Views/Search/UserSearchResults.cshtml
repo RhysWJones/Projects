@@ -1,0 +1,80 @@
+﻿@model AnimalCareSystem.ViewModels.UserSearchResultsListViewModel
+
+@{
+    ViewData["Title"] = "Search Results";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+
+@if (Model.Users.Count < 1 || Model.Users == null)
+{
+    <p>No results were found.</p>
+}
+else
+{
+    @foreach (AnimalCareSystem.ViewModels.UserSearchResultsViewModel userSearchResult in Model.Users)
+    {
+        <div class="card mb-3 border-0">
+            <div class="row no-gutters">
+                <div class="col-md-2">
+                    @if (userSearchResult.PhotoFolderSource == null || userSearchResult.PhotoFolderSource.Equals(""))
+                    {
+                        <img src="~/Images/User_Images/Default/default_user_image.png" class="card-img-top rounded-circle" alt="">
+                    }
+                    else
+                    {
+                        <img src="@Url.Content(userSearchResult.PhotoFolderSource)" class="card-img-top rounded-circle" alt="Profile Image">
+                    }
+                </div>
+                <div class="col-md-10">
+                    <div class="card-body">
+                        <h5 class="card-title">@userSearchResult.Forename @userSearchResult.Surname</h5>
+
+                        <ul class="list-group list-group-horizontal list-group-flush">
+                            <li class="list-group-item">
+                                <div class="custom-control custom-checkbox">
+                                    <input class="custom-control-input" asp-for="@userSearchResult.AddressVerified" type="checkbox" disabled>
+                                    <label class="custom-control-label">Address Verified</label>
+                                </div>
+                            </li>
+
+                            <li class="list-group-item">
+                                <div class="custom-control custom-checkbox">
+                                    <input class="custom-control-input" asp-for="@userSearchResult.IdentificationVerified" type="checkbox" disabled>
+                                    <label class="custom-control-label">Identification Verified</label>
+                                </div>
+                            </li>
+
+                            <li class="list-group-item">
+                                <div class="custom-control custom-checkbox">
+                                    <input class="custom-control-input" asp-for="@userSearchResult.DBSChecked" type="checkbox" disabled>
+                                    <label class="custom-control-label">DBS Checked</label>
+                                </div>
+                            </li>
+
+                            <li class="list-group-item">
+                                <div class="custom-control custom-checkbox">
+                                    <input class="custom-control-input" asp-for="@userSearchResult.BoardingLicenseVerified" type="checkbox" disabled>
+                                    <label class="custom-control-label">Boarding License Verified</label>
+                                </div>
+                            </li>
+                        </ul>
+                        @if (userSearchResult.NumberOfRecommendations == 1)
+                        {
+                            <p class="card-text">@userSearchResult.NumberOfRecommendations Recommendation</p>
+                        }
+                        else if (userSearchResult.NumberOfRecommendations > 1)
+                        {
+                            <p class="card-text">@userSearchResult.NumberOfRecommendations Recommendations</p>
+                        }
+                    </div>
+                    <a class="btn btn-primary btn m-2" role="button" aria-disabled="true" asp-controller="Profile" asp-action="UserProfile" asp-route-userId="@userSearchResult.UserId">View Profile</a>
+                </div>
+            </div>
+        </div>
+
+    }
+}
+
+

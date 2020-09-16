@@ -1,0 +1,217 @@
+NONESERIALIZED: READER
+=============
+
+package vehicleshowroomproj;
+
+import java.io.*;
+import java.util.*;
+
+public class VehicleFileReader
+{
+
+    private Scanner input;
+
+    private String manufacturer;
+    private String model;
+    private String custName;
+    private String vehicleIdentificationNumber;
+    private String manufactureDate;
+    private char taxBand;
+    private int cost;
+
+    public VehicleFileReader()
+    {
+        try
+        {
+            input = new Scanner(new File("files/vehicleInput.txt"));
+        }
+        catch (FileNotFoundException fnfe)
+        {
+            System.out.println("FILE NOT FOUND"
+                    + "\n==============\n" + fnfe);
+        }
+    }
+
+    public void createVehicleFromFile(ArrayList<Vehicle> vehicles)
+    {
+        Vehicle vehicle;
+        while (input.hasNext())
+        {
+            try
+            {
+                manufacturer = input.next();
+                model = input.next();
+                vehicleIdentificationNumber = input.next();
+                manufactureDate = input.next();
+                taxBand = input.next().charAt(0);
+                cost = Integer.parseInt(input.next());
+            }
+            catch (Exception e)
+            {
+                System.out.println("Error readig data" + e);
+            }
+            vehicle = new Vehicle(manufacturer, model,
+                    vehicleIdentificationNumber, manufactureDate,
+                    taxBand, cost);
+            vehicles.add(vehicle);
+        }
+        if (input != null)
+        {
+            input.close();
+        }
+    }
+}
+
+
+NONESERIALIZED: WRITER
+============
+
+package vehicleshowroomproj;
+
+import java.io.*;
+
+public class VehicleFileWriter
+{
+
+    FileWriter fw;
+    File file;
+
+    public VehicleFileWriter()
+    {
+        file = new File("files/vehicleWrite.txt");
+        try
+        {
+            fw = new FileWriter(file);
+
+        }
+        catch (IOException ioe)
+        {
+            System.out.println("File doesn't exist" + ioe);
+        }
+    }
+
+    public void writeToFile(Showroom showroom)
+    {
+        Vehicle v = showroom.getCurrentVehicle();
+        try
+        {
+            fw.write(v.getManufacturer() + "  " + v.getModel() + "  " +
+                    v.getVehicleIdentificationNumber() + "  " + v.getManufactureDate() + "  " +
+                    v.getTaxBand() + "  " + v.getCost());
+            fw.flush();
+            fw.close();
+        }
+        catch (IOException ioe)
+        {
+            System.out.println(ioe);
+        }
+    }
+}
+
+
+SERIALIZED: READER
+==================
+
+package vehicleshowroomproj;
+
+import java.io.*;
+import java.util.*;
+
+public class VehicleFileReader
+{
+
+    FileInputStream fIn;
+    ObjectInputStream in;
+
+    public VehicleFileReader()
+    {
+        try
+        {
+            fIn = new FileInputStream("files/vehicles.ser");
+            in = new ObjectInputStream(fIn);
+        }
+        catch (FileNotFoundException fnfe)
+        {
+            System.out.println("FILE NOT FOUND"
+                    + "\n==============\n" + fnfe);
+        }
+        catch (IOException ioe)
+        {
+            System.out.println("SOMETHING HAS GONE WRONG"
+                    + "\n========================\n" + ioe);
+        }
+    }
+
+    public ArrayList<Vehicle> populateArrayFromFile(ArrayList<Vehicle> vehicles)
+    {
+        vehicles.removeAll(vehicles);
+        try
+        {
+            vehicles = (ArrayList<Vehicle>) in.readObject();
+            in.close();
+        }
+        catch (Exception e)
+        {
+            System.out.println("ERROR\n=====\n" + e);
+        }
+        return vehicles;
+    }
+}
+
+
+SERIALIZED: WRITER
+==================
+
+package vehicleshowroomproj;
+
+import java.io.*;
+import java.util.*;
+
+public class VehicleFileWriter
+{
+
+    FileOutputStream fOut;
+    ObjectOutputStream out;
+
+    public VehicleFileWriter()
+    {
+
+        try
+        {
+            fOut = new FileOutputStream("files/vehicles.ser");
+            out = new ObjectOutputStream(fOut);
+
+        }
+        catch (IOException ioe)
+        {
+            System.out.println("Error" + ioe);
+        }
+
+    }
+
+    public boolean writeToFile(ArrayList<Vehicle> vehicles)
+    {
+        try
+        {
+            out.writeObject(vehicles);
+            out.close();
+            fOut.close();
+            return true;
+        }
+        catch (IOException ioe)
+        {
+            System.out.println("Not Serializable\n" + ioe);
+            return false;
+        }
+    }
+}
+
+CHANGES
+=======
+
+Different file type, serialized requires a file type .ser as per java convention.
+Also populating the array, i created an object straight from the serialized file
+so i didn't need to instantiate variables and create a new object from them.
+
+Writing to the file is the same, wrote a serialized object to the .ser file
+instead of writing strings.

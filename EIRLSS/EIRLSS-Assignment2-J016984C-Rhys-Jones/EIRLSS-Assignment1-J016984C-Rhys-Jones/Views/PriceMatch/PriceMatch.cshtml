@@ -1,0 +1,49 @@
+﻿@model EIRLSS_Assignment1_J016984C_Rhys_Jones.ViewModels.PriceMatchViewModel
+@{
+    ViewData["Title"] = "PriceMatch";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Price Match</h1>
+
+<form id="account" method="post">
+    <div asp-validation-summary="All" class="text-danger"></div>
+
+    <div class="row">
+        @if (Model.PriceMatchVehicles.Count > 0)
+        {
+            <div class="col-sm-12">
+                <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>Vehicle Description</th>
+                            <th>Our Price</th>
+                            <th>Competition Price</th>
+                        </tr>
+                    </thead>
+                    @for (int i = 0; i < Model.PriceMatchVehicles.Count; i++)
+                    {
+                        <tbody>
+                            <tr class="table">
+                                <td>@Model.PriceMatchVehicles[i].VehicleDescription</td>
+                                <td>@Model.PriceMatchVehicles[i].VehicleTypeCostPerDay</td>
+                                <td>@Model.PriceMatchVehicles[i].PriceToMatch</td>
+                                <td>
+                                    <input type="hidden" class="form-check-input" value="@Model.PriceMatchVehicles[i].VehicleId">
+                                    <button type="submit" class="btn btn-secondary btn-sm" asp-area="" asp-controller="PriceMatch" asp-action="PriceMatch" asp-route-id="@Model.PriceMatchVehicles[i].VehicleId">Price Match</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    }
+                </table>
+            </div>
+        }
+        else
+        {
+            <div class="col-sm-9">
+                <span class="badge badge-warning" offset-sm-2>Warning</span>
+                <p>There is no data to display.</p>
+            </div>
+        }
+    </div>
+</form>

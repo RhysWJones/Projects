@@ -1,0 +1,6 @@
+INSERT INTO USERS (USERNAME, PASSWORD, AUTHENTICATED)
+VALUES ('Admin', '69+MwAvE2c7uYzxWxjtJlVdpqSygYIJcmwjkr2Eybis=', false);
+INSERT INTO USERS (USERNAME, PASSWORD, AUTHENTICATED) 
+VALUES ('Supervisor', '69+MwAvE2c7uYzxWxjtJlVdpqSygYIJcmwjkr2Eybis=', true);
+
+!-- inserts users into the user table with the password "pass".

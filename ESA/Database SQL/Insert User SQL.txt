@@ -1,0 +1,4 @@
+INSERT INTO USERS (USERNAME, PASSWORD, AUTHENTICATED)
+VALUES ('Admin', '69+MwAvE2c7uYzxWxjtJlVdpqSygYIJcmwjkr2Eybis=', false);
+
+!-- inserts a user into the user table with the username "Admin" and the password "pass".

@@ -1,0 +1,18 @@
+﻿@model EIRLSS_Assignment1_J016984C_Rhys_Jones.ViewModels.FileUploadViewModel
+@{
+    ViewData["Title"] = "FileUpload";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Upload Files</h1>
+
+<form id="fileUpload" method="post" enctype="multipart/form-data">
+
+    <div class="form-group">
+        <label for="DVLADataFile">DVLA License Data File</label>
+        <input asp-for="DVLADataFile" type="file" class="form-control-file" name="dvlaDataFile">
+        <span asp-validation-for="DVLADataFile" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

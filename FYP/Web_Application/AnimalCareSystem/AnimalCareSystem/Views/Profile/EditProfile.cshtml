@@ -1,0 +1,43 @@
+﻿@model AnimalCareSystem.ViewModels.UserProfileEditViewModel
+
+@{
+    ViewData["Title"] = "Profile Edit";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<form id="editProfile" asp-controller="profile" asp-action="editProfile" method="post" enctype="multipart/form-data">
+    <div class="form-group">
+        <label asp-for="Description">About Me:</label>
+        <textarea asp-for="Description" class="form-control" id="descriptionEdit" rows="7"></textarea>
+    </div>
+
+    @if (Model.Carer)
+    {
+        <h3>Service Rates</h3>
+
+        @for (int i = 0; i < Model.ServiceRates.Count; i++)
+        {
+            <div class="form-group col-md-6">
+                <label asp-for="ServiceRates[i].Rate">@Model.ServiceRates[i].ServiceType.Name Rate:</label>
+                <input asp-for="ServiceRates[i].Rate" value="@Model.ServiceRates[i].Rate" />
+                <span asp-validation-for="ServiceRates[i].Rate" class="text-danger"></span>
+                <input asp-for="ServiceRates[i].ServiceType.Id" value="@Model.ServiceRates[i].ServiceType.Id" hidden />
+                <input asp-for="ServiceRates[i].ServiceType.Name" value="@Model.ServiceRates[i].ServiceType.Name" hidden />
+            </div>
+        }
+    }
+
+    <input asp-for="UserId" value="@Model.UserId" hidden />
+    <input type="checkbox" asp-for="Carer" value="@Model.Carer" hidden />
+
+    <h3>Change Photo</h3>
+
+    <div class="form-group">
+        <label for="ProfilePhoto">Profile Photo</label>
+        <input asp-for="ProfilePhoto" type="file" class="form-control-file" name="profilePhoto">
+        <span asp-validation-for="ProfilePhoto" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

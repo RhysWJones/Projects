@@ -1,0 +1,20 @@
+﻿@model EIRLSS_Assignment1_J016984C_Rhys_Jones.ViewModels.UpdateVehicleComparisonSourceViewModel
+@{
+    ViewData["Title"] = "UpdateVehicleComparisonSource";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Update Vehicle Comparison Source</h1>
+
+<form id="updateVehicleComparisonSource" method="post" enctype="multipart/form-data">
+
+    <div class="form-group">
+        <label for="VehicleComparisonSource">URL To Compare Vehicle Prices For This Vehicle</label>
+        <input asp-for="VehicleComparisonSource" type="text" class="form-control-file" name="vehicleComparisonSource">
+        <span asp-validation-for="VehicleComparisonSource" class="text-danger"></span>
+    </div>
+
+    <input asp-for="VehicleId" type="hidden" class="form-control-file" name="vehicleId">
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

@@ -1,0 +1,62 @@
+package innerclassesproj;
+
+public class TestStudent
+{
+
+    public static void main(String[] args)
+    {
+        Student s1 = new Student ("Daffy", 21, "Smithfield Drive");
+        Student.Address anotherAddress = s1.new Address(8, "Deerfield Way");
+        Student.Address uniAddress = s1.new Address(72, "Nottingham Drive");
+        s1.setUniAddress(uniAddress);
+        
+        System.out.println(anotherAddress.toString());
+        System.out.println("");
+        System.out.println(s1.toString());
+    }
+    
+}
+
+
+// This is the changes i made to TestStudent after making Address private. I commented out the creation of the address instances, and instead passed in an int and String 
+to setUniAddress, which then created an instance of Address from within the Student Class. With a createAddress method within the Student class i believe you could also
+create "anotherAddress" in the same way.
+package innerclassesproj;
+
+public class TestStudent
+{
+
+    public static void main(String[] args)
+    {
+        Student s1 = new Student ("Daffy", 21, "Smithfield Drive");
+//        Student.Address anotherAddress = s1.new Address(8, "Deerfield Way");
+//        Student.Address uniAddress = s1.new Address(72, "Nottingham Drive");
+        s1.setUniAddress(72, "Nottingham Drive");
+        
+//        System.out.println(anotherAddress.toString());
+        System.out.println("");
+        System.out.println(s1.toString());
+    }
+}
+
+
+// I have created Address instances by removing s1.new Address. This means the Addresses have been created by are not associated with the Student s1, they can, through 
+however, through Student methods, be associated with the s1 instance of Student.
+
+package innerclassesproj;
+
+public class TestStudent
+{
+
+    public static void main(String[] args)
+    {
+        Student s1 = new Student ("Daffy", 21, "Smithfield Drive");
+        Student.Address anotherAddress = new Student.Address(8, "Deerfield Way");
+        Student.Address uniAddress = new Student.Address(72, "Nottingham Drive");
+        s1.setUniAddress(uniAddress);
+        
+        System.out.println(anotherAddress.toString());
+        System.out.println("");
+        System.out.println(s1.toString());
+    }
+}

@@ -1,0 +1,8 @@
+F:\UNI-LEVEL 5\T-BSE\T-BSE Assignment 1 - J016984C\DataParallelismProjF#\DataParallelismProjFSh\bin\Debug\netcoreapp2.0\DataParallelismProjFSh.deps.json
+F:\UNI-LEVEL 5\T-BSE\T-BSE Assignment 1 - J016984C\DataParallelismProjF#\DataParallelismProjFSh\bin\Debug\netcoreapp2.0\DataParallelismProjFSh.runtimeconfig.json
+F:\UNI-LEVEL 5\T-BSE\T-BSE Assignment 1 - J016984C\DataParallelismProjF#\DataParallelismProjFSh\bin\Debug\netcoreapp2.0\DataParallelismProjFSh.runtimeconfig.dev.json
+F:\UNI-LEVEL 5\T-BSE\T-BSE Assignment 1 - J016984C\DataParallelismProjF#\DataParallelismProjFSh\bin\Debug\netcoreapp2.0\DataParallelismProjFSh.dll
+F:\UNI-LEVEL 5\T-BSE\T-BSE Assignment 1 - J016984C\DataParallelismProjF#\DataParallelismProjFSh\bin\Debug\netcoreapp2.0\DataParallelismProjFSh.pdb
+F:\UNI-LEVEL 5\T-BSE\T-BSE Assignment 1 - J016984C\DataParallelismProjF#\DataParallelismProjFSh\obj\Debug\netcoreapp2.0\DataParallelismProjFSh.fsprojResolveAssemblyReference.cache
+F:\UNI-LEVEL 5\T-BSE\T-BSE Assignment 1 - J016984C\DataParallelismProjF#\DataParallelismProjFSh\obj\Debug\netcoreapp2.0\DataParallelismProjFSh.dll
+F:\UNI-LEVEL 5\T-BSE\T-BSE Assignment 1 - J016984C\DataParallelismProjF#\DataParallelismProjFSh\obj\Debug\netcoreapp2.0\DataParallelismProjFSh.pdb

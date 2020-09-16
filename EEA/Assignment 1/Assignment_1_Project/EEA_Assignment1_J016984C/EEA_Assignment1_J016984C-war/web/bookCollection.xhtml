@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <body>
+
+        <ui:composition template="./Layout.xhtml">
+
+            <ui:define name="content">
+                <span class="badge badge-warning">You must be able to prove your identity upon collection with a valid form of ID and a recent utility bill or bank statement</span>
+                <span class="badge badge-warning">Collections can not be made on the same day</span>
+                <h:form>
+                    <div class="form-group">
+                        <label for="collectionDate">Collection Date</label>
+                        <h:inputText id="collectionDate"
+                                     class="form-control"
+                                     value="#{bookCollectionBean.collectionDate}"
+                                     required="true"
+                                     requiredMessage="Please enter a collection date."
+                                     converter="dateConverter"
+                                     converterMessage="Please enter a date in the form dd/mm/yyyy"
+                                     maxlength="10" >
+                            <f:validator validatorId="dateValidator"/>
+                        </h:inputText>
+                        <small class="form-text text-muted">Enter a date in the format: dd/mm/yyyy</small>
+                    </div>
+                    <h:commandButton class="btn btn-primary" type="submit" value="Search" action="#{bookCollectionBean.bookCollection()}"/>
+                </h:form>
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>

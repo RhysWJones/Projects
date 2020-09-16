@@ -1,0 +1,102 @@
+package junitproj;
+
+import java.util.*;
+import junitproj.DVD.DVDComparator;
+import org.junit.After;
+import org.junit.AfterClass;
+import org.junit.Before;
+import org.junit.BeforeClass;
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+
+public class DVDCollectionTest
+{
+    private ArrayList<DVD> theDVDs = new ArrayList();
+    private Person p1;
+    private Person p2;
+    private Person p3;
+    private Person p4;
+    
+    public DVDCollectionTest()
+    {
+        
+    }
+    
+    @BeforeClass
+    public static void setUpClass()
+    {
+    }
+    
+    @AfterClass
+    public static void tearDownClass()
+    {
+    }
+    
+    @Before
+    public void setUp()
+    {
+        p1 = new Person("Leonardo", "DiCaprio");
+        p2 = new Person("Fay", "Wray");
+        p3 = new Person("Naomi", "Watts");
+        p4 = new Person("Cary", "Grant");
+        theDVDs.add(new DVD("Inception", p1, 5));
+        theDVDs.add(new DVD("King Kong", p2, 5));
+        theDVDs.add(new DVD("King Kong", p3, 4));
+        theDVDs.add(new DVD("Indiscreet", p4, 3));
+        theDVDs.add(new DVD("Ellie Parker", p3, 4));
+    }
+    
+    @After
+    public void tearDown()
+    {
+    }
+    
+    @Test
+    public void testShuffle()
+    {
+        Collections.shuffle(theDVDs);
+        System.out.println("Test Shuffle\n============\n");
+        
+        for(DVD d : theDVDs)
+        {
+            System.out.println(d + "\n");
+        }
+    }
+    
+    @Test
+    public void testSort()
+    {
+        System.out.println("DVD's before Sort\n===============\n");
+        for(DVD d : theDVDs)
+        {
+            System.out.println(d + "\n");
+        }
+        
+        Collections.sort(theDVDs);
+        System.out.println("Test Sort\n=========\n");
+        
+        for(DVD d : theDVDs)
+        {
+            System.out.println(d + "\n");
+        }
+        
+        assertEquals("Title: Ellie Parker" + "\nLead Actor: Naomi Watts" + "\nNumber of stars: 4", theDVDs.get(0).toString());
+        assertEquals("Title: Inception" + "\nLead Actor: Leonardo DiCaprio" + "\nNumber of stars: 5", theDVDs.get(1).toString());
+        assertEquals("Title: Indiscreet" + "\nLead Actor: Cary Grant" + "\nNumber of stars: 3", theDVDs.get(2).toString());
+        assertEquals("Title: King Kong" + "\nLead Actor: Naomi Watts" + "\nNumber of stars: 4", theDVDs.get(3).toString());
+        assertEquals("Title: King Kong" + "\nLead Actor: Fay Wray" + "\nNumber of stars: 5", theDVDs.get(4).toString());
+    }
+    
+    @Test
+    public void testSortByStars()
+    {
+        System.out.println("Test Sort by Stars\n===================\n");
+        Collections.sort(theDVDs, new DVDComparator());
+        
+        for(DVD d : theDVDs)
+        {
+            System.out.println(d + "\n");
+        }
+    }
+}

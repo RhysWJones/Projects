@@ -1,0 +1,135 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+
+    <body>
+
+        <ui:composition template="./Layout.xhtml">
+
+            <ui:define name="content">
+                <span class="badge badge-warning">Edited fields will be updated upon clicking 'Edit'</span>
+                <span class="badge badge-danger">Deleting your account is irreversible</span>
+                <h:form>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputForename">Forename</label>
+                            <h:outputText id="forename"
+                                          class="form-control"
+                                          value="#{accountDetailsViewBean.user.forename}"/>
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label for="inputSurname">Surname</label>
+                            <h:outputText id="surname"
+                                          class="form-control"
+                                          value="#{accountDetailsViewBean.user.surname}"/>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="dateOfBirth">Date Of Birth</label>
+                        <h:outputText id="dateOfBirth"
+                                      class="form-control"
+                                      value="#{accountDetailsViewBean.user.dateOfBirth}"
+                                      converter="dateConverter"/>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="inputEmail">Email</label>
+                        <h:inputText id="email"
+                                     class="form-control"
+                                     value="#{accountDetailsViewBean.user.email}"
+                                     maxlength="25"
+                                     required="true"
+                                     requiredMessage="Please enter a valid email address">
+                            <f:validator validatorId="userValidator" />
+                        </h:inputText>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="oldPassword">Old Password</label>
+                        <h:inputSecret id="oldPassword"
+                                       class="form-control"
+                                       value="#{accountDetailsViewBean.oldPassword}">
+                            <f:validator validatorId="userValidator"/>
+                        </h:inputSecret>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="newPassword">New Password</label>
+                            <h:inputSecret id="newPassword"
+                                           class="form-control"
+                                           value="#{accountDetailsViewBean.newPassword}">
+                                <f:validator validatorId="userValidator"/>
+                            </h:inputSecret>
+                        </div>
+
+
+                        <div class="form-group col-md-6">
+                            <label for="inputConfirmPassword">Confirm New Password</label>
+                            <h:inputSecret class="form-control"
+                                           value="#{accountDetailsViewBean.confirmPassword}">
+                            </h:inputSecret>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputAddressLine1">Address Line 1</label>
+                            <h:inputText class="form-control"
+                                         value="#{accountDetailsViewBean.user.addressLine1}"
+                                         required="true"
+                                         requiredMessage="Please enter the first line of your address"/>
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label for="inputAddressLine2">Address Line 2</label>
+                            <h:inputText class="form-control"
+                                         value="#{accountDetailsViewBean.user.addressLine2}"
+                                         required="false"/>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="inputCity">City</label>
+                                <h:inputText class="form-control"
+                                             value="#{accountDetailsViewBean.user.city}"
+                                             required="true"
+                                             requiredMessage="Please enter your city"/>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="inputPostcode">Postcode</label>
+                                <h:inputText id="postcode"
+                                             class="form-control"
+                                             value="#{accountDetailsViewBean.user.postcode}"
+                                             required="false">
+                                    <f:validator validatorId="userValidator"/>
+                                </h:inputText>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="inputTelephone">Telephone</label>
+                        <h:inputText class="form-control"
+                                     value="#{accountDetailsViewBean.user.telephone}"
+                                     required="true"
+                                     requiredMessage="Please enter your telephone number"/>
+                    </div>
+
+                    <h:commandButton class="btn btn-primary" type="submit" value="Update" action="#{accountDetailsViewBean.updateAccountDetails}"/>
+                    <h:commandButton class="btn btn-danger" type="submit" value="Delete" action="#{accountDetailsViewBean.deleteAccount}"/>
+                </h:form>
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>

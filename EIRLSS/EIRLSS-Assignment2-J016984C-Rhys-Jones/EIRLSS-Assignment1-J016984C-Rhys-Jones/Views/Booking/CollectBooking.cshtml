@@ -1,0 +1,49 @@
+﻿@model EIRLSS_Assignment1_J016984C_Rhys_Jones.ViewModels.CollectBookingViewModel
+@{
+    ViewData["Title"] = "CollectBooking";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Collect Booking</h1>
+
+<form id="collectBooking" method="post" enctype="multipart/form-data">
+
+    <div class="form-group">
+        <label for="BookingId">Driving License Image: Front</label>
+        <input asp-for="BookingId" type="number" class="form-control-file" name="bookingId" readonly>
+        <span asp-validation-for="BookingId" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="DrivingLicenseNumber">Driving License Number</label>
+        <input asp-for="DrivingLicenseNumber" type="text" class="form-control-file" name="drivingLicenseNumber" readonly>
+        <small id="checkMatch" class="form-text">* Check this matches with their driving license.</small>
+        <span asp-validation-for="DrivingLicenseNumber" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="DrivingLicenseImageFront">Driving License Image: Front</label>
+        <input asp-for="DrivingLicenseImageFront" type="file" class="form-control-file" name="drivingLicenseImageFront">
+        <span asp-validation-for="DrivingLicenseImageFront" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="DrivingLicenseImageBack">Driving License Image: Back</label>
+        <input asp-for="DrivingLicenseImageBack" type="file" class="form-control-file" name="drivingLicenseImageBack">
+        <span asp-validation-for="DrivingLicenseImageBack" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="AdditionalIdentificationImage">Additional Identification Image</label>
+        <input asp-for="AdditionalIdentificationImage" type="file" class="form-control-file" name="additionalIdentificationImage">
+        <span asp-validation-for="AdditionalIdentificationImage" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="PersonCollectingImage">Photo of the Person Collecting</label>
+        <input asp-for="PersonCollectingImage" type="file" class="form-control-file" name="personCollectingImage">
+        <span asp-validation-for="PersonCollectingImage" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

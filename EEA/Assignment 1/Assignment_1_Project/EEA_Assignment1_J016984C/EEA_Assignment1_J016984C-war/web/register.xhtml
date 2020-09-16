@@ -1,0 +1,153 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <body>
+
+        <ui:composition template="./Layout.xhtml">
+
+            <ui:define name="content">
+
+                <h:form>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputForename">Forename</label>
+                            <h:inputText id="forename"
+                                         class="form-control"
+                                         value="#{registerBean.forename}"
+                                         required="true"
+                                         requiredMessage="Please enter your forename to register">
+                                <f:validator validatorId="userValidator" />
+                            </h:inputText>
+                            <small class="form-text text-muted">* Required</small>
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label for="inputSurname">Surname</label>
+                            <h:inputText id="surname"
+                                         class="form-control"
+                                         value="#{registerBean.surname}"
+                                         required="true"
+                                         requiredMessage="Please enter your surname to register">
+                                <f:validator validatorId="userValidator" />
+                            </h:inputText>
+                            <small class="form-text text-muted">* Required</small>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="inputDateOfBirth">Date Of Birth</label>
+                        <h:inputText id="dateOfBirth"
+                                     class="form-control"
+                                     value="#{registerBean.dateOfBirth}"
+                                     required="true"
+                                     requiredMessage="Please enter your date of birth"
+                                     converter="dateConverter"
+                                     converterMessage="Please enter a date in the form dd/mm/yyyy"
+                                     maxlength="10" >
+                            <f:validator validatorId="userValidator" />
+                        </h:inputText>
+                        <small class="form-text text-muted">* Required</small>
+                        <small class="form-text text-muted">Enter your date of birth in the format: dd/mm/yyyy</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="inputEmail">Email</label>
+                        <h:inputText id="email"
+                                     class="form-control"
+                                     value="#{registerBean.email}"
+                                     maxlength="25"
+                                     required="true"
+                                     requiredMessage="Please enter a valid email address to register">
+                            <f:validator validatorId="userValidator" />
+                        </h:inputText>
+                        <small class="form-text text-muted">* Required</small>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputPassword">Password</label>
+                            <h:inputSecret id="password"
+                                           class="form-control"
+                                           value="#{registerBean.password}"
+                                           required="true"
+                                           requiredMessage="Please enter a valid password to register">
+                                <f:validator validatorId="userValidator"/>
+                            </h:inputSecret>
+                            <small class="form-text text-muted">* Required</small>
+                        </div>
+
+
+                        <div class="form-group col-md-6">
+                            <label for="inputConfirmPassword">Confirm Password</label>
+                            <h:inputSecret class="form-control"
+                                           value="#{registerBean.confirmPassword}"
+                                           required="true"
+                                           requiredMessage="Please confirm your password to register">
+                            </h:inputSecret>
+                            <small class="form-text text-muted">* Required</small>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputAddressLine1">Address Line 1</label>
+                            <h:inputText class="form-control"
+                                         value="#{registerBean.addressLine1}"
+                                         required="true"
+                                         requiredMessage="Please enter the first line of your address to register"/>
+                            <small class="form-text text-muted">* Required</small>
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label for="inputAddressLine2">Address Line 2</label>
+                            <h:inputText class="form-control"
+                                         value="#{registerBean.addressLine2}"
+                                         required="false"/>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="inputCity">City</label>
+                                <h:inputText class="form-control"
+                                             value="#{registerBean.city}"
+                                             required="true"
+                                             requiredMessage="Please enter your city to register"/>
+                                <small class="form-text text-muted">* Required</small>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="inputPostcode">Postcode</label>
+                                <h:inputText id="postcode"
+                                             class="form-control"
+                                             value="#{registerBean.postcode}"
+                                             required="false">
+                                    <f:validator validatorId="userValidator"/>
+                                </h:inputText>
+                                <small class="form-text text-muted">* Required</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="inputTelephone">Telephone</label>
+                        <h:inputText class="form-control"
+                                     value="#{registerBean.telephone}"
+                                     required="true"
+                                     requiredMessage="Please enter your telephone number to register"/>
+                    </div>
+
+                    <h:commandButton class="btn btn-primary" type="submit" value="Register" action="#{registerBean.register()}" />
+                </h:form>
+
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>

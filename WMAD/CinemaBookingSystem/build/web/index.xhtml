@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <title></title>
+    </h:head>
+    <h:body>
+        <ui:composition template="/template.xhtml" >
+            <ui:define name="page-title">Home Page</ui:define>
+
+            <ui:define name="content">
+                <h:form>
+                    <p><h:commandButton type="submit" value="Add Film" action="Add Film" rendered="#{sessionScope.loggedAdmin != null}" /></p>
+                    <p><h:commandButton type="submit" value="Delete Film" action="#{DeleteFilmBean.displayAllFilms}" rendered="#{sessionScope.loggedAdmin != null}" /></p>
+                    <p><h:commandButton type="submit" value="viewBookings" action="#{ViewBookingsBean.viewBookings()}" rendered="#{sessionScope.loggedAdmin != null}" /></p>
+                    <p><h:commandButton type="submit" value="Update Account Details" action="Update Account" rendered="#{sessionScope.loggedCustomer != null}" /></p>
+                    <p><h:commandButton type="submit" value="View Cinemas" action="View Cinemas"/></p>
+                    <p><h:commandButton type="submit" value="Log In" action="login" rendered="#{sessionScope.loggedCustomer == null and sessionScope.loggedAdmin == null}"/> </p>
+                    <p><h:commandButton type="submit" value="Log Off" action="#{LoginBean.logOff()}" rendered="#{sessionScope.loggedCustomer != null or sessionScope.loggedAdmin != null}"/> </p>
+                </h:form>
+            </ui:define>
+        </ui:composition>
+    </h:body>
+</html>
+

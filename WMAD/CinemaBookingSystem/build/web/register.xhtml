@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <title></title>
+    </h:head>
+    <h:body>
+        <ui:composition template="/template.xhtml" >
+            <ui:define name="page-title">Registration Page</ui:define>
+
+            <ui:define name="content">
+                <div class="inline">
+                    <h3>Register</h3>
+                    <h:form>
+                        <h:panelGrid columns="2">
+                            <p>Forename: </p>
+                            <h:inputText value="#{RegisterBean.forename}"
+                                         required="true"
+                                         requiredMessage="Please enter your forename." />
+
+                            <p>Surname: </p>
+                            <h:inputText value="#{RegisterBean.surname}"
+                                         required="true"
+                                         requiredMessage="Please enter your surname." />
+                            
+                            <p>Date of Birth: </p>
+                            <h:inputText value="#{RegisterBean.DOB}"
+                                         required="true"
+                                         requiredMessage="Please enter your date of birth." />
+                            
+                            <p>Address Line 1: </p>
+                            <h:inputText value="#{RegisterBean.addressLine1}"
+                                         required="true"
+                                         requiredMessage="Please enter line 1 of your address." />
+                            
+                            <p>Address Line 2: </p>
+                            <h:inputText value="#{RegisterBean.addressLine2}"
+                                         required="true"
+                                         requiredMessage="Please enter line 2 of your address." />
+                            
+                            <p>Postcode: </p>
+                            <h:inputText value="#{RegisterBean.postcode}"
+                                         required="true"
+                                         requiredMessage="Please enter your postcode." />
+                            
+                            <p>Username: </p>
+                            <h:inputText value="#{RegisterBean.username}"
+                                         required="true"
+                                         requiredMessage="Please enter a username." />
+                            
+                            <p>Password 1: </p>
+                            <h:inputSecret value="#{RegisterBean.password1}"
+                                         required="true"
+                                         requiredMessage="Please enter a password" />
+                            
+                            <p>Re-enter password: </p>
+                            <h:inputSecret value="#{RegisterBean.password2}"
+                                         required="true"
+                                         requiredMessage="Please re-enter your password." />
+                        </h:panelGrid>
+                        <p><h:commandButton type="submit" value="Cancel" action="cancel" immediate="true" />
+                        </p>
+                        <p><h:commandButton type="submit" value="Register" action="#{RegisterBean.register()}" />
+                        </p>
+                    </h:form>
+                </div>
+            </ui:define>
+        </ui:composition>
+    </h:body>
+</html>
+

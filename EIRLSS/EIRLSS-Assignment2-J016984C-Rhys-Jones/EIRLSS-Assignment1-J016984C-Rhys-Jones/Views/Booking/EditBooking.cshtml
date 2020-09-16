@@ -1,0 +1,135 @@
+﻿@model EIRLSS_Assignment1_J016984C_Rhys_Jones.ViewModels.EditBookingViewModel
+@{
+    ViewData["Title"] = "EditBooking";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Edit @Model.VehicleName Booking For @Model.UserForename @Model.UserSurname</h1>
+<div asp-validation-summary="All" class="text-danger"></div>
+
+<div class="row">
+    <form asp-controller="booking" asp-action="EditBooking" method="post">
+
+        <div class="form-group">
+            <label asp-for="StartDate">Start Date</label>
+            <input asp-for="StartDate" class="form-control" type="date" id="StartDate" value=@Model.StartDate.ToString("yyyy-MM-dd") readonly>
+            <span asp-validation-for="StartDate" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="EndDate">End Date</label>
+            <input asp-for="EndDate" class="form-control" type="date" id="EndDate" value=@Model.EndDate.ToString("yyyy-MM-dd")>
+            <span asp-validation-for="EndDate" class="text-danger"></span>
+        </div>
+
+        <hr />
+
+        <div class="form-check form-check-inline">
+            <label class="form-check-label mr-2" asp-for="StartHalfDay">Collect Mid Day?</label>
+            <input asp-for="StartHalfDay" class="form-check-input" type="checkbox" id="StartHalfDay">
+            <span asp-validation-for="StartHalfDay" class="text-danger"></span>
+        </div>
+
+        <div class="form-check form-check-inline">
+            <label class="form-check-label mr-2 ml-2" asp-for="EndHalfDay">Return Mid Day?</label>
+            <input asp-for="EndHalfDay" class="form-check-input" type="checkbox" id="EndHalfDay">
+            <span asp-validation-for="EndHalfDay" class="text-danger"></span>
+        </div>
+
+        <hr />
+        @if (User.IsInRole("Admin"))
+        {
+            <div class="form-check form-check-inline">
+                <label class="form-check-label mr-2" asp-for="LateReturn">Return Vehicle After Hours?</label>
+                <input asp-for="LateReturn" class="form-check-input" type="checkbox" id="LateReturn">
+                <span asp-validation-for="LateReturn" class="text-danger"></span>
+            </div>
+
+            <div class="form-check form-check-inline">
+                <label class="form-check-label mr-2 ml-2" asp-for="Collected">Vehicle Collected?</label>
+                <input asp-for="Collected" class="form-check-input" type="checkbox" id="Collected">
+                <span asp-validation-for="Collected" class="text-danger"></span>
+            </div>
+
+            <hr />
+        }
+
+        <p>Equipment</p>
+
+        @{
+            for (int i = 0; i < Model.ChosenEquipmentList.Count(); i++)
+            {
+                <div class="form-check form-check-inline mb-1">
+                    <label class="form-check-label mr-2" asp-for="@Model.ChosenEquipmentList[i].Id">@Model.ChosenEquipmentList[i].Name </label>
+                    <input asp-for="@Model.ChosenEquipmentList[i].CheckboxAnswer" type="checkbox" />
+                    <input asp-for="@Model.ChosenEquipmentList[i].Id" hidden />
+                    <input asp-for="@Model.ChosenEquipmentList[i].Name" hidden />
+                </div>
+            }
+        }
+        <hr />
+
+        <div class="form-row mb-2">
+            <label class="form-check-label" asp-for="Price">Cost Of Rental</label>
+            <input asp-for="Price" class="form-control" type="number" placeholder="Total" id="TotalCost" readonly>
+            <span asp-validation-for="Price" class="text-danger"></span>
+
+            <input asp-for="VehicleId" type="number" value="@Model.VehicleId" hidden>
+            <input asp-for="VehicleCostPerDay" type="number" value="@Model.VehicleCostPerDay" id="CostPerDay" hidden>
+            <input asp-for="BookingId" type="number" value="@Model.BookingId" hidden>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit Edit</button>
+    </form>
+</div>
+
+@section scripts
+{
+    <script type="text/javascript">
+        $(document).ready(function (e) {
+
+            var StartDate = document.getElementById('StartDate');
+            var EndDate = document.getElementById('EndDate');
+            var StartHalfDay = document.getElementById('StartHalfDay');
+            var EndHalfDay = document.getElementById('EndHalfDay');
+            var TotalCost = document.getElementById('TotalCost');
+            var CostPerDay = document.getElementById('CostPerDay');
+
+            function updateSum()
+            {
+                var start = new Date(StartDate.value);
+                var end = new Date(EndDate.value);
+
+                var difference = end.getTime() - start.getTime();
+                var daysOfRental = difference / (1000 * 3600 * 24)
+
+                var total = CostPerDay.value * daysOfRental;
+
+                if (StartHalfDay.checked == true && total > 0) {
+                    total = (total - (CostPerDay.value / 2))
+                }
+
+                if (EndHalfDay.checked == true) {
+                    total = (total + (CostPerDay.value / 2))
+                }
+
+                TotalCost.value = total;
+            }
+
+            document.getElementById("EndDate").onchange = function (e) {
+                updateSum();
+            }
+
+            document.getElementById("StartDate").onchange = function (e) {
+                updateSum();
+            }
+
+            document.getElementById("StartHalfDay").onchange = function (e) {
+                updateSum();
+            }
+
+            document.getElementById("EndHalfDay").onchange = function (e) {
+                updateSum();
+            }
+        });
+    </script>
+}

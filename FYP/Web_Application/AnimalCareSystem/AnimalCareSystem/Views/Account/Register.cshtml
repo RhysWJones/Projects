@@ -1,0 +1,106 @@
+﻿@model AnimalCareSystem.ViewModels.RegisterViewModel
+
+@{
+    ViewData["Title"] = "Register";
+}
+
+<h1>@ViewData["Title"]</h1>
+<form id="account" method="post">
+    <div class="container bg-light">
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label asp-for="Forename">Forename</label>
+                <input asp-for="Forename" class="form-control" id="inputForename" placeholder="John">
+                <small id="required" class="form-text">* Required.</small>
+                <span asp-validation-for="Forename" class="text-danger"></span>
+            </div>
+
+            <div class="form-group col-md-6">
+                <label asp-for="Surname">Surname</label>
+                <input asp-for="Surname" class="form-control" id="inputSurname" placeholder="Doe">
+                <small id="required" class="form-text">* Required.</small>
+                <span asp-validation-for="Surname" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="DateOfBirth">Date of Birth</label>
+            <input asp-for="DateOfBirth" class="form-control" type="date" id="inputDateOfBirth" value="1994-07-24">
+            <small id="required" class="form-text">* Required.</small>
+            <span asp-validation-for="DateOfBirth" class="text-danger"></span>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label asp-for="AddressLine1">Address Line 1</label>
+                <input asp-for="AddressLine1" class="form-control" id="inputAddressLine1" placeholder="46 Drury Lane">
+                <small id="required" class="form-text">* Required.</small>
+                <span asp-validation-for="AddressLine1" class="text-danger"></span>
+            </div>
+
+            <div class="form-group col-md-6">
+                <label asp-for="AddressLine2">Address Line 2</label>
+                <input asp-for="AddressLine2" class="form-control" id="inputAddressLine2" placeholder="Apartment, Suite or Floor">
+                <span asp-validation-for="AddressLine2" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label asp-for="City">City</label>
+                <input asp-for="City" class="form-control" id="inputCity" placeholder="London">
+                <small id="required" class="form-text">* Required.</small>
+                <span asp-validation-for="City" class="text-danger"></span>
+            </div>
+
+            <div class="form-group col-md-6">
+                <label asp-for="County">County</label>
+                <input asp-for="County" class="form-control" id="inputCounty" placeholder="Buckinghamshire">
+                <span asp-validation-for="County" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Postcode">Postcode</label>
+            <input asp-for="Postcode" class="form-control" id="inputPostcode" placeholder="WC2B 5JF">
+            <small id="required" class="form-text">* Required.</small>
+            <span asp-validation-for="Postcode" class="text-danger"></span>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label asp-for="Email">Email address</label>
+                <input asp-for="Email" type="email" class="form-control" aria-describedby="emailHelp" placeholder="Enter email">
+                <small id="required" class="form-text">* Required.</small>
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+
+            <div class="form-group col-md-6">
+                <label asp-for="PhoneNumber">Phone Number</label>
+                <input asp-for="PhoneNumber" class="form-control" id="inputPhoneNumber" placeholder="+447890654123">
+                <small id="required" class="form-text">* Required.</small>
+                <small id="phoneHelp" class="form-text text-muted">Telephone numbers must be between 10 & 12 numeric characters in length and may include a country code.</small>
+                <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label asp-for="Password">Password</label>
+                <input asp-for="Password" type="password" class="form-control" id="inputPassword" placeholder="Password">
+                <small id="required" class="form-text">* Required.</small>
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <div class="form-group col-md-6">
+                <label asp-for="ConfirmPassword">Confirm Password</label>
+                <input asp-for="ConfirmPassword" type="password" class="form-control" id="inputConfirmPassword" placeholder="Confirm Password">
+                <small id="required" class="form-text">* Required.</small>
+                <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+            </div>
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary mt-3">Submit</button>
+
+</form>

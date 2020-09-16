@@ -1,0 +1,78 @@
+﻿@model EIRLSS_Assignment1_J016984C_Rhys_Jones.ViewModels.AddVehicleViewModel
+@{
+    ViewData["Title"] = "AddVehicle";
+}
+
+<h1>Add Vehicle</h1>
+
+<form id="vehicle" method="post" enctype="multipart/form-data">
+    <div class="text-danger"></div>
+    <div class="form-group">
+        <label asp-for="Manufacturer">Manufacturer</label>
+        <input asp-for="Manufacturer" class="form-control" placeholder="Toyota">
+        <span asp-validation-for="Manufacturer" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Model">Model</label>
+        <input asp-for="Model" class="form-control" placeholder="Yaris">
+        <span asp-validation-for="Model" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Doors">No. of doors</label>
+        <input asp-for="Doors" class="form-control" placeholder=0>
+        <span asp-validation-for="Doors" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Seats">No. of seats</label>
+        <input asp-for="Seats" class="form-control" placeholder=0>
+        <span asp-validation-for="Seats" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Colour">Colour</label>
+        <input asp-for="Colour" class="form-control" placeholder="Black">
+        <span asp-validation-for="Colour" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="CostPerDay">Cost per day</label>
+        <input asp-for="CostPerDay" class="form-control" placeholder=0.00>
+        <span asp-validation-for="CostPerDay" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="TransmissionId">Transmission</label>
+        <select asp-for="TransmissionId" asp-items="ViewBag.TransmissionList" class="form-control">
+            <option value=null>Please select one...</option>
+        </select>
+        <span asp-validation-for="TransmissionId" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="FuelId">Fuel</label>
+        <select asp-for="FuelId" asp-items="ViewBag.FuelList" class="form-control">
+            <option value=null>Please select one...</option>
+        </select>
+        <span asp-validation-for="FuelId" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="VehicleTypeId">Vehicle type</label>
+        <select asp-for="VehicleTypeId" asp-items="ViewBag.VehicleTypeList" class="form-control">
+            <option value=null>Please select one...</option>
+        </select>
+        <span asp-validation-for="VehicleTypeId" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="vehicleImageFile">Vehicle Image</label>
+        <input asp-for="vehicleImageFile" type="file" class="form-control-file" name="vehicleImageFile">
+        <span asp-validation-for="vehicleImageFile" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+

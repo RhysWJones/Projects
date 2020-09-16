@@ -1,0 +1,12 @@
+INSERT INTO J016984C.USERS (FORENAME, SURNAME, DOB, EMAIL, PASSWORD, ADDRESS_LINE_1, ADDRESS_LINE_2, POSTCODE, CITY, TELEPHONE, IS_DRIVER, DRIVER_ID, ROUTE_ID) 
+	VALUES ('John', 'Tanner', '1987-04-17', 'john.tanner@driver.com', 'qzjq2ut0ZZnywe6Q+CZ/MfRnNHRidkok1xrBhD7nf+M=', '12 Driver Lane', 'n/a', 'DR11VR', 'Leicester', '01837196478', true, 1, null);
+INSERT INTO J016984C.USERS (FORENAME, SURNAME, DOB, EMAIL, PASSWORD, ADDRESS_LINE_1, ADDRESS_LINE_2, POSTCODE, CITY, TELEPHONE, IS_DRIVER, DRIVER_ID, ROUTE_ID) 
+	VALUES ('Dave', 'Little', '1987-12-04', 'dave.little@driver.com', 'qzjq2ut0ZZnywe6Q+CZ/MfRnNHRidkok1xrBhD7nf+M=', '44 Driver Avenue', 'n/a', 'DR12VR', 'Somewhere', '01837196478', true, 2, null);
+INSERT INTO J016984C.USERS (FORENAME, SURNAME, DOB, EMAIL, PASSWORD, ADDRESS_LINE_1, ADDRESS_LINE_2, POSTCODE, CITY, TELEPHONE, IS_DRIVER, DRIVER_ID, ROUTE_ID) 
+	VALUES ('Gareth', 'Edge', '1984-07-14', 'gareth.edge@driver.com', 'qzjq2ut0ZZnywe6Q+CZ/MfRnNHRidkok1xrBhD7nf+M=', '76 Driver Avenue', 'n/a', 'DR13VR', 'Somewhere Else', '01837196478', true, 3, null);
+INSERT INTO J016984C.USERS (FORENAME, SURNAME, DOB, EMAIL, PASSWORD, ADDRESS_LINE_1, ADDRESS_LINE_2, POSTCODE, CITY, TELEPHONE, IS_DRIVER, DRIVER_ID, ROUTE_ID) 
+	VALUES ('Bruce', 'Wayne', '1984-07-14', 'Bruce.Wayne@wayneenterprises.com', 'qzjq2ut0ZZnywe6Q+CZ/MfRnNHRidkok1xrBhD7nf+M=', '26 Wayne Lane', 'n/a', 'GO74AM', 'Gotham', '01837196478', false, null, null);
+INSERT INTO J016984C.USERS (FORENAME, SURNAME, DOB, EMAIL, PASSWORD, ADDRESS_LINE_1, ADDRESS_LINE_2, POSTCODE, CITY, TELEPHONE, IS_DRIVER, DRIVER_ID, ROUTE_ID) 
+	VALUES ('Bat', 'Man', '1984-07-14', 'iamthebatman@gc.com', 'qzjq2ut0ZZnywe6Q+CZ/MfRnNHRidkok1xrBhD7nf+M=', '26 Wayne Lane', 'n/a', 'GO74AM', 'Gotham', '01837196478', false, null, null);
+INSERT INTO J016984C.USERS (FORENAME, SURNAME, DOB, EMAIL, PASSWORD, ADDRESS_LINE_1, ADDRESS_LINE_2, POSTCODE, CITY, TELEPHONE, IS_DRIVER, DRIVER_ID, ROUTE_ID) 
+	VALUES ('John', 'Wick', '1984-07-14', 'John.Wick@keanu.com', 'qzjq2ut0ZZnywe6Q+CZ/MfRnNHRidkok1xrBhD7nf+M=', '36 Whatsit Lane', 'n/a', 'JW13CK', 'Bath', '01837196478', false, null, null);

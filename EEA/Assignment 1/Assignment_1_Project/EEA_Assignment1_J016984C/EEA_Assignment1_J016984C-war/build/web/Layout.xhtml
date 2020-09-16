@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8' ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+
+    <h:head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"/>
+        <title>J016984C - EEA ASSIGNMENT 1</title>
+    </h:head>
+
+    <h:body>
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-2">
+                <span class="navbar-brand mb-0 h1">EEA Assignment</span>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav mr-auto">
+                        <h:link value="Home" outcome="index" class="nav-item nav-link text-light"></h:link>
+                        <h:link value="Search" outcome="deliverySearch" class="nav-item nav-link text-light"></h:link>
+                        <h:form>
+                            <h:commandLink value="View Your Deliveries" action="#{recipientDeliveriesViewBean.getAllDeliveriesForUser}" class="nav-item nav-link text-light" rendered="#{sessionScope.loggedUser ne null}"></h:commandLink>
+                            <h:commandLink value="Collect Deliveries" action="#{driverCollectLocationViewBean.getRoutesAndDepots}" class="nav-item nav-link text-light" rendered="#{sessionScope.loggedDriver ne null}"></h:commandLink>
+                        </h:form>
+                        <h:form>
+                            <h:commandLink value="Your Deliveries" action="#{driverDeliveriesViewBean.getDeliveriesForView}" class="nav-item nav-link text-light" rendered="#{sessionScope.loggedDriver ne null}"></h:commandLink>
+                        </h:form>
+                    </div>
+                    <form class="form-inline my-2 my-lg-0">
+                        <h:link value="Register" outcome="register" class="nav-item nav-link text-light" rendered="#{sessionScope.loggedUser eq null and sessionScope.loggedDriver eq null}"></h:link>
+                        <h:link value="Login" outcome="login" class="nav-item nav-link text-light" rendered="#{sessionScope.loggedUser eq null and sessionScope.loggedDriver eq null}"></h:link>
+                    </form>
+                    <h:form class="form-inline my-2 my-lg-0">
+                        <h:commandLink value="Account" action="#{accountDetailsViewBean.displayAccountDetails}" class="nav-item nav-link text-light" rendered="#{sessionScope.loggedUser ne null}"></h:commandLink>
+                        <h:commandLink value="Logout" action="#{loginBean.logout}" class="nav-item nav-link text-light" rendered="#{sessionScope.loggedUser ne null or sessionScope.loggedDriver ne null}"></h:commandLink>
+                    </h:form>
+                </div>
+            </nav>
+        </header>
+
+        <div class="container pt-3 pb-5">
+            <ui:insert name="content">Main content</ui:insert>
+        </div>
+
+        <!--<footer class="border-top footer bg-dark text-muted bottom">
+            <div class="container footer-copyright text-center">
+                &copy; 2019 - Staffordshire University
+            </div>
+        </footer>-->
+
+    </h:body>
+
+</html>
